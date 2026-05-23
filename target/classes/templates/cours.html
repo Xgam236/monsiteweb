@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cours</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="dashboard-body theme-cours">
+
+<nav class="premium-navbar">
+
+    <div class="nav-brand">
+        📗 Cours
+    </div>
+
+    <div class="nav-center">
+        <a href="/home" class="nav-link-home">Accueil</a>
+        <a href="/fiche" class="nav-link-fiche">Fiche</a>
+        <a href="/cours" class="nav-link-cours active">Cours</a>
+        <a href="/forum" class="nav-link-entraide">Entraide</a>
+        <a href="/planning" class="nav-link-planning">Planning</a>
+        <a href="/statistiques" class="nav-link-stats">Statistiques</a>
+    </div>
+
+    <div class="nav-actions">
+
+        <a th:if="${isAdmin}" href="/admin" class="admin-btn">
+            ADMIN
+        </a>
+
+        <form th:action="@{/logout}" method="post" class="logout-form">
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <button type="submit" class="logout-btn">
+                Déconnexion
+            </button>
+        </form>
+
+    </div>
+
+</nav>
+
+<main class="dashboard-main">
+
+    <section class="hero-panel">
+
+        <div>
+            <p class="welcome-small">Cours</p>
+
+            <h1>
+                Tes cours, <span th:text="${username}">utilisateur</span> 📚
+            </h1>
+
+            <p>
+                Retrouve ici tes matières, chapitres et contenus de révision.
+                Cette page servira plus tard à organiser tes cours par matière.
+            </p>
+        </div>
+
+        <div class="hero-badge">
+            Organisation
+        </div>
+
+    </section>
+
+    <section class="cards-grid">
+
+        <div class="dashboard-card">
+            <h2>📐 Mathématiques</h2>
+            <p>Fonctions, probabilités, suites, géométrie et exercices.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>🧪 Physique-Chimie</h2>
+            <p>Formules, méthodes, expériences et notions importantes.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>🌍 Histoire-Géo</h2>
+            <p>Cours, cartes, dates clés et méthodes de composition.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>🧬 SVT</h2>
+            <p>Schémas, bilans, définitions et entraînements.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>🇬🇧 Anglais</h2>
+            <p>Vocabulaire, expression écrite, oral et compréhension.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>📝 Philosophie</h2>
+            <p>Notions, auteurs, citations et plans de dissertation.</p>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
