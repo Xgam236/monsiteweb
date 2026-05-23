@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body class="dashboard-body theme-home">
+
+<nav class="premium-navbar">
+
+    <div class="nav-brand">
+        📚 Révision École
+    </div>
+
+    <div class="nav-center">
+        <a href="/home" class="nav-link-home active">Accueil</a>
+        <a href="/fiche" class="nav-link-fiche">Fiche</a>
+        <a href="/cours" class="nav-link-cours">Cours</a>
+        <a href="/forum" class="nav-link-entraide">Entraide</a>
+        <a href="/planning" class="nav-link-planning">Planning</a>
+        <a href="/statistiques" class="nav-link-stats">Statistiques</a>
+    </div>
+
+    <div class="nav-actions">
+
+        <a th:if="${isAdmin}" href="/admin" class="admin-btn">
+            ADMIN
+        </a>
+
+        <form th:action="@{/logout}" method="post" class="logout-form">
+
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <button type="submit" class="logout-btn">
+                Déconnexion
+            </button>
+
+        </form>
+
+    </div>
+
+</nav>
+
+<main class="home-main">
+
+    <section class="home-hero">
+
+        <div class="home-hero-content">
+
+            <div class="home-pill">
+                Plateforme de révision scolaire
+            </div>
+
+            <h1>
+                Bienvenue, <span th:text="${username}">utilisateur</span> 👋
+            </h1>
+
+            <p>
+                Organise tes révisions, crée tes fiches, suis ta progression
+                et échange avec les autres élèves depuis un seul espace.
+            </p>
+
+            <div class="home-hero-actions">
+                <a href="/fiche" class="home-primary-action">
+                    Créer une fiche
+                </a>
+
+                <a href="/planning" class="home-secondary-action">
+                    Voir mon planning
+                </a>
+            </div>
+
+        </div>
+
+        <div class="home-hero-panel">
+
+            <div class="home-floating-card card-one">
+                <span>📘</span>
+                <div>
+                    <strong>Fiches</strong>
+                    <p>Organise tes révisions</p>
+                </div>
+            </div>
+
+            <div class="home-floating-card card-two">
+                <span>📊</span>
+                <div>
+                    <strong>Progression</strong>
+                    <p>Suis ton évolution</p>
+                </div>
+            </div>
+
+            <div class="home-floating-card card-three">
+                <span>🤝</span>
+                <div>
+                    <strong>Entraide</strong>
+                    <p>Pose tes questions</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="home-section">
+
+        <div class="section-header">
+            <div>
+                <p class="welcome-small">Navigation rapide</p>
+                <h2>Accède rapidement à tes outils</h2>
+            </div>
+
+            <span class="section-badge">
+                Espace personnel
+            </span>
+        </div>
+
+        <div class="home-shortcuts">
+
+            <a href="/fiche" class="home-shortcut-card red-card">
+                <div class="shortcut-icon">🟥</div>
+                <h3>Fiches</h3>
+                <p>Crée et retrouve tes fiches de révision.</p>
+            </a>
+
+            <a href="/cours" class="home-shortcut-card green-card">
+                <div class="shortcut-icon">📗</div>
+                <h3>Cours</h3>
+                <p>Consulte tes matières et chapitres.</p>
+            </a>
+
+            <a href="/forum" class="home-shortcut-card blue-card">
+                <div class="shortcut-icon">🤝</div>
+                <h3>Entraide</h3>
+                <p>Discute avec les autres élèves.</p>
+            </a>
+
+            <a href="/planning" class="home-shortcut-card purple-card">
+                <div class="shortcut-icon">🗓</div>
+                <h3>Planning</h3>
+                <p>Organise tes séances de travail.</p>
+            </a>
+
+            <a href="/statistiques" class="home-shortcut-card cyan-card">
+                <div class="shortcut-icon">📊</div>
+                <h3>Statistiques</h3>
+                <p>Suis ton évolution et ta régularité.</p>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="home-bottom-grid">
+
+        <div class="home-info-card">
+
+            <div class="section-header compact">
+                <div>
+                    <p class="welcome-small">Objectifs</p>
+                    <h2>À faire aujourd’hui</h2>
+                </div>
+
+                <button type="button" class="reset-objectives-btn" onclick="resetObjectivesManually()">
+                    Réinitialiser
+                </button>
+            </div>
+
+            <div class="todo-list">
+
+                <button type="button" class="todo-item" data-objective="create-fiche">
+                    <span class="todo-status">○</span>
+                    <div>
+                        <strong>Créer une fiche</strong>
+                        <p>Prépare une fiche sur un chapitre important.</p>
+                    </div>
+                </button>
+
+                <button type="button" class="todo-item" data-objective="read-course">
+                    <span class="todo-status">○</span>
+                    <div>
+                        <strong>Relire un cours</strong>
+                        <p>Revois une notion que tu maîtrises moins.</p>
+                    </div>
+                </button>
+
+                <button type="button" class="todo-item" data-objective="ask-question">
+                    <span class="todo-status">○</span>
+                    <div>
+                        <strong>Poser une question</strong>
+                        <p>Utilise l’entraide si tu bloques sur un exercice.</p>
+                    </div>
+                </button>
+
+            </div>
+
+            <p class="objectives-info">
+                Les objectifs validés se réinitialisent automatiquement après 24h.
+            </p>
+
+        </div>
+
+        <div class="home-info-card">
+
+            <div class="section-header compact">
+                <div>
+                    <p class="welcome-small">Activité</p>
+                    <h2>Résumé rapide</h2>
+                </div>
+            </div>
+
+            <div class="activity-grid">
+
+                <div class="activity-box">
+                    <strong>0</strong>
+                    <span>Fiches créées</span>
+                </div>
+
+                <div class="activity-box work-time-box">
+                    <strong id="work-time-value">0 min</strong>
+                    <span>Temps de travail</span>
+                    <p class="work-time-info">
+                        Temps accumulé automatiquement pendant ta connexion.
+                    </p>
+                </div>
+
+                <div class="activity-box">
+                    <strong>0</strong>
+                    <span>Forums créés</span>
+                </div>
+
+                <div class="activity-box">
+                    <strong id="objective-level">Débutant</strong>
+                    <span>Niveau actuel</span>
+                </div>
+
+            </div>
+
+            <p class="objectives-info">
+                Le niveau actuel est calculé avec ton temps de travail accumulé.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script>
+    const OBJECTIVES_KEY = "revision_home_objectives";
+    const OBJECTIVES_TIME_KEY = "revision_home_objectives_time";
+
+    const WORK_TIME_KEY = "revision_home_work_seconds";
+    const WORK_LAST_UPDATE_KEY = "revision_home_work_last_update";
+
+    const RESET_DELAY = 24 * 60 * 60 * 1000;
+
+    let workTimer = null;
+
+    const defaultObjectives = {
+        "create-fiche": false,
+        "read-course": false,
+        "ask-question": false
+    };
+
+    function getObjectives() {
+        const saved = localStorage.getItem(OBJECTIVES_KEY);
+
+        if (!saved) {
+            return { ...defaultObjectives };
+        }
+
+        try {
+            return JSON.parse(saved);
+        } catch (error) {
+            return { ...defaultObjectives };
+        }
+    }
+
+    function saveObjectives(objectives) {
+        localStorage.setItem(OBJECTIVES_KEY, JSON.stringify(objectives));
+        localStorage.setItem(OBJECTIVES_TIME_KEY, Date.now().toString());
+    }
+
+    function shouldResetObjectives() {
+        const savedTime = localStorage.getItem(OBJECTIVES_TIME_KEY);
+
+        if (!savedTime) {
+            localStorage.setItem(OBJECTIVES_TIME_KEY, Date.now().toString());
+            return false;
+        }
+
+        const elapsed = Date.now() - Number(savedTime);
+        return elapsed >= RESET_DELAY;
+    }
+
+    function resetObjectives() {
+        saveObjectives({ ...defaultObjectives });
+    }
+
+    function resetObjectivesManually() {
+        resetObjectives();
+        updateObjectivesUI();
+    }
+
+    function updateObjectivesUI() {
+        const objectives = getObjectives();
+        const todoItems = document.querySelectorAll(".todo-item");
+
+        todoItems.forEach(item => {
+            const objectiveKey = item.dataset.objective;
+            const status = item.querySelector(".todo-status");
+
+            if (objectives[objectiveKey]) {
+                item.classList.add("completed");
+                status.textContent = "✅";
+            } else {
+                item.classList.remove("completed");
+                status.textContent = "○";
+            }
+        });
+    }
+
+    function getWorkSeconds() {
+        const saved = localStorage.getItem(WORK_TIME_KEY);
+        return saved ? Number(saved) : 0;
+    }
+
+    function saveWorkSeconds(seconds) {
+        localStorage.setItem(WORK_TIME_KEY, String(seconds));
+    }
+
+    function formatWorkTime(totalSeconds) {
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        if (hours > 0) {
+            if (minutes === 0) {
+                return hours + "h";
+            }
+
+            return hours + "h" + minutes;
+        }
+
+        if (minutes > 0) {
+            return minutes + " min";
+        }
+
+        return seconds + " sec";
+    }
+
+    function getLevelFromSeconds(seconds) {
+        const hours = seconds / 3600;
+
+        if (hours >= 20) {
+            return "Expert";
+        }
+
+        if (hours >= 10) {
+            return "Excellent";
+        }
+
+        if (hours >= 5) {
+            return "Sérieux";
+        }
+
+        if (hours >= 3) {
+            return "Régulier";
+        }
+
+        if (hours >= 1) {
+            return "Motivé";
+        }
+
+        return "Débutant";
+    }
+
+    function updateWorkTimeUI() {
+        const seconds = getWorkSeconds();
+
+        const workTimeValue = document.getElementById("work-time-value");
+        const levelValue = document.getElementById("objective-level");
+
+        if (workTimeValue) {
+            workTimeValue.textContent = formatWorkTime(seconds);
+        }
+
+        if (levelValue) {
+            levelValue.textContent = getLevelFromSeconds(seconds);
+        }
+    }
+
+    function addOneSecondOfWork() {
+        const currentSeconds = getWorkSeconds();
+        const newSeconds = currentSeconds + 1;
+
+        saveWorkSeconds(newSeconds);
+        updateWorkTimeUI();
+    }
+
+    function startAutomaticWorkTimer() {
+        if (workTimer !== null) {
+            clearInterval(workTimer);
+        }
+
+        workTimer = setInterval(() => {
+            addOneSecondOfWork();
+        }, 1000);
+    }
+
+    function saveLastUpdateTime() {
+        localStorage.setItem(WORK_LAST_UPDATE_KEY, Date.now().toString());
+    }
+
+    function initHomePage() {
+        if (shouldResetObjectives()) {
+            resetObjectives();
+        }
+
+        const todoItems = document.querySelectorAll(".todo-item");
+
+        todoItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const objectiveKey = item.dataset.objective;
+                const objectives = getObjectives();
+
+                objectives[objectiveKey] = !objectives[objectiveKey];
+
+                saveObjectives(objectives);
+                updateObjectivesUI();
+            });
+        });
+
+        updateObjectivesUI();
+        updateWorkTimeUI();
+        startAutomaticWorkTimer();
+        saveLastUpdateTime();
+    }
+
+    window.addEventListener("beforeunload", () => {
+        saveLastUpdateTime();
+    });
+
+    document.addEventListener("DOMContentLoaded", initHomePage);
+</script>
+
+</body>
+</html>

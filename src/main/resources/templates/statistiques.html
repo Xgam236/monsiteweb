@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistiques</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="dashboard-body theme-stats">
+
+<nav class="premium-navbar">
+
+    <div class="nav-brand">
+        📊 Statistiques
+    </div>
+
+    <div class="nav-center">
+        <a href="/home" class="nav-link-home">Accueil</a>
+        <a href="/fiche" class="nav-link-fiche">Fiche</a>
+        <a href="/cours" class="nav-link-cours">Cours</a>
+        <a href="/forum" class="nav-link-entraide">Entraide</a>
+        <a href="/planning" class="nav-link-planning">Planning</a>
+        <a href="/statistiques" class="nav-link-stats active">Statistiques</a>
+    </div>
+
+    <div class="nav-actions">
+
+        <a th:if="${isAdmin}" href="/admin" class="admin-btn">
+            ADMIN
+        </a>
+
+        <form th:action="@{/logout}" method="post" class="logout-form">
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <button type="submit" class="logout-btn">
+                Déconnexion
+            </button>
+        </form>
+
+    </div>
+
+</nav>
+
+<main class="dashboard-main">
+
+    <section class="hero-panel">
+
+        <div>
+            <p class="welcome-small">Statistiques</p>
+
+            <h1>
+                Suis ta progression 📈
+            </h1>
+
+            <p>
+                Cette page affichera ton temps de travail, tes fiches créées,
+                tes objectifs réussis et ton activité sur le forum.
+            </p>
+        </div>
+
+        <div class="hero-badge">
+            Progression
+        </div>
+
+    </section>
+
+    <section class="cards-grid">
+
+        <div class="dashboard-card">
+            <h2>⏱ Temps de travail</h2>
+            <p>0 heure enregistrée pour l’instant.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>📘 Fiches créées</h2>
+            <p>Les fiches de révision apparaîtront ici.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>🤝 Forums créés</h2>
+            <p>Ton activité dans l’entraide sera affichée ici.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>🎯 Objectifs atteints</h2>
+            <p>Les objectifs validés seront comptabilisés ici.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>📅 Régularité</h2>
+            <p>Ta fréquence de révision sera affichée sur cette carte.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>🏆 Niveau</h2>
+            <p>Un système de progression pourra être ajouté plus tard.</p>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

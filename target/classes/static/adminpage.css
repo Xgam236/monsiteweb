@@ -1,0 +1,280 @@
+/* ========================= */
+/* ADMIN PAGE PREMIUM */
+/* ========================= */
+
+.admin-body {
+    min-height: 100vh;
+    background:
+            radial-gradient(circle at 10% 15%, rgba(255, 122, 0, 0.24), transparent 30%),
+            radial-gradient(circle at 90% 80%, rgba(255, 180, 70, 0.22), transparent 35%),
+            linear-gradient(135deg, #fffaf5, #fff1dd);
+}
+
+.admin-main {
+    padding: 52px;
+}
+
+/* ========================= */
+/* HERO ADMIN */
+/* ========================= */
+
+.admin-hero {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 224, 191, 0.9);
+    border-radius: 32px;
+    padding: 48px;
+    box-shadow: 0 26px 60px rgba(255, 122, 0, 0.17);
+    animation: adminFadeUp 0.7s ease;
+}
+
+.admin-small {
+    margin: 0;
+    color: #ff7a00;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-size: 13px;
+}
+
+.admin-title {
+    margin: 12px 0;
+    font-size: 46px;
+    color: #222;
+    letter-spacing: -1px;
+}
+
+.admin-subtitle {
+    max-width: 850px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ========================= */
+/* SECTIONS ADMIN */
+/* ========================= */
+
+.admin-section {
+    margin-top: 36px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #ffe0bf;
+    border-radius: 30px;
+    padding: 36px;
+    box-shadow: 0 18px 44px rgba(255, 122, 0, 0.14);
+    animation: adminFadeUp 0.7s ease;
+}
+
+.admin-section h2 {
+    margin-top: 0;
+    color: #ff7a00;
+    font-size: 28px;
+}
+
+/* ========================= */
+/* GRILLES ADMIN */
+/* ========================= */
+
+.admin-stats-grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+}
+
+.admin-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 24px;
+}
+
+/* ========================= */
+/* CARTES ADMIN */
+/* ========================= */
+
+.admin-stat-card,
+.admin-action-card {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #ffe0bf;
+    border-radius: 26px;
+    padding: 28px;
+    box-shadow: 0 16px 36px rgba(255, 122, 0, 0.13);
+    transition: 0.28s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-stat-card::before,
+.admin-action-card::before {
+    content: "";
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    top: -48px;
+    right: -48px;
+    background: rgba(255, 122, 0, 0.13);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.admin-stat-card:hover,
+.admin-action-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 55px rgba(255, 122, 0, 0.24);
+}
+
+.admin-stat-card:hover::before,
+.admin-action-card:hover::before {
+    transform: scale(1.35);
+}
+
+.admin-stat-card h2,
+.admin-action-card h3 {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    color: #ff7a00;
+}
+
+.admin-stat-card p,
+.admin-action-card p {
+    position: relative;
+    z-index: 2;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ========================= */
+/* BOUTONS ADMIN */
+/* ========================= */
+
+.admin-action-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+
+    text-decoration: none;
+    border: none;
+
+    color: white;
+    background: linear-gradient(135deg, #ff7a00, #ff9f2e);
+
+    padding: 11px 15px;
+    border-radius: 14px;
+
+    font-weight: 800;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+
+    box-shadow: 0 10px 20px rgba(255, 122, 0, 0.22);
+}
+
+.admin-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(255, 122, 0, 0.32);
+}
+
+.admin-action-btn:active {
+    transform: scale(0.97);
+}
+
+/* Bouton suppression définitive */
+.danger-btn {
+    background: linear-gradient(135deg, #e53935, #ff6b6b) !important;
+    box-shadow: 0 10px 20px rgba(229, 57, 53, 0.25) !important;
+}
+
+.danger-btn:hover {
+    box-shadow: 0 14px 28px rgba(229, 57, 53, 0.38) !important;
+    transform: translateY(-2px);
+}
+
+/* ========================= */
+/* LOGS */
+/* ========================= */
+
+.admin-action-card h3 {
+    font-size: 20px;
+}
+
+.admin-action-card strong {
+    color: #ff7a00;
+}
+
+/* ========================= */
+/* BADGES STATUS FORUM */
+/* ========================= */
+
+.status-open {
+    color: #0d8a3a;
+    font-weight: 900;
+}
+
+.status-closed {
+    color: #d97706;
+    font-weight: 900;
+}
+
+.status-deleted {
+    color: #d00000;
+    font-weight: 900;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes adminFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 1100px) {
+    .admin-stats-grid,
+    .admin-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .admin-main {
+        padding: 24px;
+    }
+
+    .admin-hero {
+        padding: 30px;
+    }
+
+    .admin-title {
+        font-size: 34px;
+    }
+
+    .admin-stats-grid,
+    .admin-actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-section {
+        padding: 26px;
+    }
+
+    .admin-action-btn {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+}

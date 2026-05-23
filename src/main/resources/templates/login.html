@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="auth-body">
+
+<div class="auth-bg"></div>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="auth-logo">📚</div>
+
+        <h1>Connexion</h1>
+
+        <p class="auth-subtitle">
+            Accède à ton espace de révision
+        </p>
+
+        <div th:if="${param.error}" class="alert error">
+            Identifiant incorrect, mot de passe incorrect ou compte non vérifié.
+        </div>
+
+        <div th:if="${param.captchaError}" class="alert error">
+            Captcha incorrect. Réessaie avec le nouveau captcha.
+        </div>
+
+        <div th:if="${param.locked}" class="alert error">
+            Trop de tentatives. Réessaie plus tard.
+        </div>
+
+        <div th:if="${param.logout}" class="alert success">
+            Déconnexion réussie.
+        </div>
+
+        <div th:if="${success}" class="alert success" th:text="${success}"></div>
+
+        <div th:if="${error}" class="alert error" th:text="${error}"></div>
+
+        <form th:action="@{/login}" method="post">
+
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <div class="input-group">
+                <label>Identifiant</label>
+                <input type="text"
+                       name="username"
+                       placeholder="Entre ton identifiant"
+                       autocomplete="username"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label>Mot de passe</label>
+                <input type="password"
+                       name="password"
+                       placeholder="Entre ton mot de passe"
+                       autocomplete="current-password"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label>Captcha</label>
+
+                <div class="captcha-box">
+                    <span th:text="${captchaQuestion}">1 + 1 = ?</span>
+                </div>
+
+                <input type="text"
+                       name="captchaAnswer"
+                       placeholder="Réponse"
+                       autocomplete="off"
+                       required>
+            </div>
+
+            <div class="remember-row">
+                <label>
+                    <input type="checkbox" name="remember-me">
+                    Se souvenir de moi
+                </label>
+            </div>
+
+            <button type="submit" class="primary-btn">
+                Se connecter
+            </button>
+
+        </form>
+
+        <a href="/register" class="secondary-link">
+            Créer un compte
+        </a>
+
+        <p class="disclaimer">
+            Nous ne stockons pas les informations sensibles en clair. Les mots de passe sont protégés.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

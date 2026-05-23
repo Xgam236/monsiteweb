@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum d'entraide</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="dashboard-body theme-entraide">
+
+<nav class="premium-navbar">
+
+    <div class="nav-brand">
+        🤝 Entraide
+    </div>
+
+    <div class="nav-center">
+        <a href="/home" class="nav-link-home">Accueil</a>
+        <a href="/fiche" class="nav-link-fiche">Fiche</a>
+        <a href="/cours" class="nav-link-cours">Cours</a>
+        <a href="/forum" class="nav-link-entraide active">Entraide</a>
+        <a href="/planning" class="nav-link-planning">Planning</a>
+        <a href="/statistiques" class="nav-link-stats">Statistiques</a>
+    </div>
+
+    <div class="nav-actions">
+
+        <form th:action="@{/logout}" method="post" class="logout-form">
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <button type="submit" class="logout-btn">
+                Déconnexion
+            </button>
+        </form>
+
+    </div>
+
+</nav>
+
+<main class="dashboard-main">
+
+    <section class="hero-panel">
+
+        <div>
+            <p class="welcome-small">Forum</p>
+
+            <h1>Forum d'entraide</h1>
+
+            <p>
+                Crée un sujet avec un titre et un texte, puis discute avec les autres élèves.
+                Les admins peuvent fermer, rouvrir, masquer ou supprimer les forums.
+            </p>
+        </div>
+
+        <div class="hero-badge">
+            Discussion collective
+        </div>
+
+    </section>
+
+    <section class="admin-section">
+
+        <h2>Créer un forum</h2>
+
+        <form th:action="@{/forum/create}" method="post">
+
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <div class="input-group">
+                <label>Titre</label>
+                <input type="text"
+                       name="title"
+                       placeholder="Ex : Besoin d'aide en maths"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label>Texte</label>
+                <textarea name="content"
+                          placeholder="Explique ta question ou ton problème..."
+                          required></textarea>
+            </div>
+
+            <button type="submit" class="primary-btn">
+                Créer le forum
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="cards-grid">
+
+        <a th:each="topic : ${topics}"
+           th:href="@{/forum/{id}(id=${topic.id})}"
+           class="dashboard-card card-link">
+
+            <h2 th:text="${topic.title}">
+                Titre forum
+            </h2>
+
+            <p>
+                Créé par :
+                <strong th:text="${topic.authorUsername}">utilisateur</strong>
+            </p>
+
+            <p>
+                Statut :
+                <strong th:text="${topic.status}">OPEN</strong>
+            </p>
+
+        </a>
+
+    </section>
+
+</main>
+
+</body>
+</html>
