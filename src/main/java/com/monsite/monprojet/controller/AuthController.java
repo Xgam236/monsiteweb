@@ -110,7 +110,7 @@ public class AuthController {
 
             model.addAttribute(
                     "success",
-                    "Compte créé ! Vérifie ta boîte mail pour activer ton compte."
+                    "\"Compte créé ! Tu peux maintenant te connecter.\""
             );
 
             return "login";
