@@ -21,7 +21,7 @@ public class User {
 
     private String role = "USER";
 
-    private boolean enabled = false;
+    private boolean enabled = true;
 
     @Column(unique = true)
     private String verificationToken;
