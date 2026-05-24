@@ -17,9 +17,9 @@ public class CustomUserDetailsService implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String identifiant) throws UsernameNotFoundException {
 
-        User user = repository.findByUsername(username)
+        User user = repository.findByUsernameOrEmail(identifiant, identifiant)
                 .orElseThrow(() -> new UsernameNotFoundException("Utilisateur introuvable."));
 
         return org.springframework.security.core.userdetails.User
