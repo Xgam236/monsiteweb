@@ -77,11 +77,6 @@ public class SecurityConfig {
         http
                 .authenticationProvider(authenticationProvider())
 
-                .addFilterBefore(
-                        captchaValidationFilter(),
-                        UsernamePasswordAuthenticationFilter.class
-                )
-
                 .csrf(csrf -> csrf
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 )
@@ -92,6 +87,7 @@ public class SecurityConfig {
                                 "/login",
                                 "/register",
                                 "/verify",
+                                "/error",
 
                                 "/style.css",
                                 "/home.css",
@@ -99,8 +95,10 @@ public class SecurityConfig {
                                 "/planning.css",
                                 "/adminpage.css",
 
+                                "/css/**",
+                                "/js/**",
                                 "/images/**",
-                                "/js/**"
+                                "/favicon.ico"
                         ).permitAll()
 
                         .requestMatchers("/admin/**").hasRole("ADMIN")
@@ -135,6 +133,11 @@ public class SecurityConfig {
 
                 .sessionManagement(session -> session
                         .sessionFixation(sessionFixation -> sessionFixation.migrateSession())
+                )
+
+                .addFilterBefore(
+                        captchaValidationFilter(),
+                        UsernamePasswordAuthenticationFilter.class
                 );
 
         return http.build();

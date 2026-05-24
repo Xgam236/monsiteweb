@@ -31,17 +31,23 @@ public class CaptchaValidationFilter extends OncePerRequestFilter {
 
         HttpSession session = request.getSession(false);
 
-        String expectedCaptcha = session == null
-                ? null
-                : String.valueOf(session.getAttribute(CAPTCHA_SESSION_KEY));
+        String expectedCaptcha = null;
+
+        if (session != null) {
+            Object captchaValue = session.getAttribute(CAPTCHA_SESSION_KEY);
+
+            if (captchaValue != null) {
+                expectedCaptcha = captchaValue.toString();
+            }
+        }
 
         String userCaptcha = request.getParameter("captchaAnswer");
 
         if (expectedCaptcha == null
                 || userCaptcha == null
-                || !expectedCaptcha.trim().equalsIgnoreCase(userCaptcha.trim())) {
+                || !expectedCaptcha.trim().equals(userCaptcha.trim())) {
 
-            response.sendRedirect("/login?captchaError=true");
+            response.sendRedirect(request.getContextPath() + "/login?captchaError=true");
             return;
         }
 
