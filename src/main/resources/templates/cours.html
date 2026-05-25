@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Cours</title>
+
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/cours.css">
 </head>
 
 <body class="dashboard-body theme-cours">
@@ -43,60 +45,99 @@
 
 </nav>
 
-<main class="dashboard-main">
+<main class="cours-main">
 
-    <section class="hero-panel">
+    <section class="cours-hero">
 
-        <div>
-            <p class="welcome-small">Cours</p>
+        <div class="cours-hero-content">
+
+            <div class="cours-pill">
+                Terminale générale — France
+            </div>
 
             <h1>
-                Tes cours, <span th:text="${username}">utilisateur</span> 📚
+                Choisis ta catégorie de cours 📗
             </h1>
 
             <p>
-                Retrouve ici tes matières, chapitres et contenus de révision.
-                Cette page servira plus tard à organiser tes cours par matière.
+                Retrouve les matières du tronc commun et les enseignements de spécialité
+                de la voie générale. Chaque catégorie est organisée pour que tu puisses
+                ensuite ajouter tes cours, chapitres et fiches.
             </p>
+
         </div>
 
-        <div class="hero-badge">
-            Organisation
+        <div class="cours-hero-panel">
+
+            <div class="cours-floating-card">
+                <span>🎓</span>
+                <div>
+                    <strong>Terminale</strong>
+                    <p>Programme lycée général</p>
+                </div>
+            </div>
+
+            <div class="cours-floating-card">
+                <span>📚</span>
+                <div>
+                    <strong>Matières</strong>
+                    <p>Tronc commun et spécialités</p>
+                </div>
+            </div>
+
+            <div class="cours-floating-card">
+                <span>🚀</span>
+                <div>
+                    <strong>Organisation</strong>
+                    <p>Base prête pour ton site</p>
+                </div>
+            </div>
+
         </div>
 
     </section>
 
-    <section class="cards-grid">
+    <section class="cours-choice-grid">
 
-        <div class="dashboard-card">
-            <h2>📐 Mathématiques</h2>
-            <p>Fonctions, probabilités, suites, géométrie et exercices.</p>
-        </div>
+        <a href="/cours/tronc-commun" class="cours-choice-card tronc-card">
 
-        <div class="dashboard-card">
-            <h2>🧪 Physique-Chimie</h2>
-            <p>Formules, méthodes, expériences et notions importantes.</p>
-        </div>
+            <div class="choice-icon">
+                🏛
+            </div>
 
-        <div class="dashboard-card">
-            <h2>🌍 Histoire-Géo</h2>
-            <p>Cours, cartes, dates clés et méthodes de composition.</p>
-        </div>
+            <div>
+                <p class="welcome-small">Catégorie 1</p>
+                <h2>Tronc commun</h2>
+                <p>
+                    Les matières obligatoires suivies par tous les élèves de Terminale générale.
+                </p>
+            </div>
 
-        <div class="dashboard-card">
-            <h2>🧬 SVT</h2>
-            <p>Schémas, bilans, définitions et entraînements.</p>
-        </div>
+            <span class="choice-arrow">
+                Ouvrir →
+            </span>
 
-        <div class="dashboard-card">
-            <h2>🇬🇧 Anglais</h2>
-            <p>Vocabulaire, expression écrite, oral et compréhension.</p>
-        </div>
+        </a>
 
-        <div class="dashboard-card">
-            <h2>📝 Philosophie</h2>
-            <p>Notions, auteurs, citations et plans de dissertation.</p>
-        </div>
+        <a href="/cours/specialites" class="cours-choice-card spe-card">
+
+            <div class="choice-icon">
+                ⭐
+            </div>
+
+            <div>
+                <p class="welcome-small">Catégorie 2</p>
+                <h2>Spécialités</h2>
+                <p>
+                    Les enseignements de spécialité possibles en voie générale.
+                </p>
+            </div>
+
+            <span class="choice-arrow">
+                Ouvrir →
+            </span>
+
+        </a>
 
     </section>
 

@@ -15,6 +15,18 @@ public class PageController {
         return "cours";
     }
 
+    @GetMapping("/cours/tronc-commun")
+    public String troncCommunPage(Authentication authentication, Model model) {
+        addUserInfo(authentication, model);
+        return "cours-tronc-commun";
+    }
+
+    @GetMapping("/cours/specialites")
+    public String specialitesPage(Authentication authentication, Model model) {
+        addUserInfo(authentication, model);
+        return "cours-specialites";
+    }
+
     @GetMapping("/planning")
     public String planningPage(Authentication authentication, Model model) {
         addUserInfo(authentication, model);

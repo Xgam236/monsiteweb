@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spécialités</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/cours.css">
+</head>
+
+<body class="dashboard-body theme-cours">
+
+<nav class="premium-navbar">
+
+    <div class="nav-brand">
+        ⭐ Spécialités
+    </div>
+
+    <div class="nav-center">
+        <a href="/home" class="nav-link-home">Accueil</a>
+        <a href="/fiche" class="nav-link-fiche">Fiche</a>
+        <a href="/cours" class="nav-link-cours active">Cours</a>
+        <a href="/forum" class="nav-link-entraide">Entraide</a>
+        <a href="/planning" class="nav-link-planning">Planning</a>
+        <a href="/statistiques" class="nav-link-stats">Statistiques</a>
+    </div>
+
+    <div class="nav-actions">
+
+        <a th:if="${isAdmin}" href="/admin" class="admin-btn">
+            ADMIN
+        </a>
+
+        <form th:action="@{/logout}" method="post" class="logout-form">
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <button type="submit" class="logout-btn">
+                Déconnexion
+            </button>
+        </form>
+
+    </div>
+
+</nav>
+
+<main class="cours-main">
+
+    <section class="cours-page-header">
+
+        <a href="/cours" class="cours-back-btn">
+            ← Retour aux catégories
+        </a>
+
+        <div>
+            <p class="welcome-small">Terminale générale</p>
+            <h1>Enseignements de spécialité</h1>
+            <p>
+                En Terminale générale, l’élève suit normalement deux spécialités parmi celles choisies en Première.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="speciality-section">
+
+        <div class="speciality-category-header">
+            <h2>Sciences</h2>
+            <p>Spécialités orientées vers les sciences, les mathématiques et le numérique.</p>
+        </div>
+
+        <div class="cours-list-grid">
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>➗ Mathématiques</h2>
+                <p>Fonctions, suites, probabilités, géométrie, algèbre et raisonnement.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>⚗️ Physique-chimie</h2>
+                <p>Mécanique, ondes, énergie, transformations chimiques et mesures.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>🧬 SVT</h2>
+                <p>Sciences de la vie, Terre, génétique, environnement, santé et évolution.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>💻 NSI</h2>
+                <p>Numérique et sciences informatiques : programmation, données, algorithmes et réseaux.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>🛠️ Sciences de l’ingénieur</h2>
+                <p>Systèmes, innovation, modélisation, énergie, mécanique et objets techniques.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>🌱 Biologie-écologie</h2>
+                <p>Spécialité proposée notamment dans l’enseignement agricole selon les établissements.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="speciality-section">
+
+        <div class="speciality-category-header">
+            <h2>Humanités, lettres et sciences sociales</h2>
+            <p>Spécialités orientées vers les lettres, les langues, la philosophie, l’histoire et les sciences humaines.</p>
+        </div>
+
+        <div class="cours-list-grid">
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>🌍 HGGSP</h2>
+                <p>Histoire-géographie, géopolitique et sciences politiques.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>📖 HLP</h2>
+                <p>Humanités, littérature et philosophie : textes, idées, culture et argumentation.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>💶 SES</h2>
+                <p>Sciences économiques et sociales : économie, sociologie et science politique.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>🇬🇧 LLCE</h2>
+                <p>Langues, littératures et cultures étrangères et régionales.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité</span>
+                <h2>🏛️ Littérature, langues et cultures de l’Antiquité</h2>
+                <p>Culture antique, textes, latin, grec et héritages littéraires.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="speciality-section">
+
+        <div class="speciality-category-header">
+            <h2>Arts et sport</h2>
+            <p>Spécialités artistiques, culturelles et sportives proposées selon les établissements.</p>
+        </div>
+
+        <div class="cours-list-grid">
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité arts</span>
+                <h2>🎨 Arts plastiques</h2>
+                <p>Création, analyse d’œuvres, histoire des arts et pratique artistique.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité arts</span>
+                <h2>🎬 Cinéma-audiovisuel</h2>
+                <p>Analyse filmique, création audiovisuelle, histoire du cinéma et écriture visuelle.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité arts</span>
+                <h2>💃 Danse</h2>
+                <p>Culture chorégraphique, pratique, création et analyse du mouvement.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité arts</span>
+                <h2>🏺 Histoire des arts</h2>
+                <p>Œuvres, patrimoine, analyse artistique et contexte historique.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité arts</span>
+                <h2>🎵 Musique</h2>
+                <p>Pratique musicale, écoute, analyse, création et culture musicale.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité arts</span>
+                <h2>🎭 Théâtre</h2>
+                <p>Jeu, mise en scène, analyse de spectacle et culture théâtrale.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité arts</span>
+                <h2>🎪 Arts du cirque</h2>
+                <p>Pratique circassienne, création, corps, espace et culture du cirque.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+            <div class="cours-subject-card">
+                <span class="subject-badge">Spécialité sport</span>
+                <h2>🏆 EPPCS</h2>
+                <p>Éducation physique, pratiques et culture sportives.</p>
+                <button type="button">Bientôt : ouvrir</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

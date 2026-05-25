@@ -93,6 +93,7 @@ public class SecurityConfig {
                                 "/home.css",
                                 "/fiche.css",
                                 "/planning.css",
+                                "/cours.css",
                                 "/adminpage.css",
 
                                 "/css/**",

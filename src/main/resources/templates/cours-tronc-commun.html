@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tronc commun</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/cours.css">
+</head>
+
+<body class="dashboard-body theme-cours">
+
+<nav class="premium-navbar">
+
+    <div class="nav-brand">
+        🏛 Tronc commun
+    </div>
+
+    <div class="nav-center">
+        <a href="/home" class="nav-link-home">Accueil</a>
+        <a href="/fiche" class="nav-link-fiche">Fiche</a>
+        <a href="/cours" class="nav-link-cours active">Cours</a>
+        <a href="/forum" class="nav-link-entraide">Entraide</a>
+        <a href="/planning" class="nav-link-planning">Planning</a>
+        <a href="/statistiques" class="nav-link-stats">Statistiques</a>
+    </div>
+
+    <div class="nav-actions">
+
+        <a th:if="${isAdmin}" href="/admin" class="admin-btn">
+            ADMIN
+        </a>
+
+        <form th:action="@{/logout}" method="post" class="logout-form">
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}">
+
+            <button type="submit" class="logout-btn">
+                Déconnexion
+            </button>
+        </form>
+
+    </div>
+
+</nav>
+
+<main class="cours-main">
+
+    <section class="cours-page-header">
+
+        <a href="/cours" class="cours-back-btn">
+            ← Retour aux catégories
+        </a>
+
+        <div>
+            <p class="welcome-small">Terminale générale</p>
+            <h1>Tronc commun</h1>
+            <p>
+                Les enseignements communs sont suivis par tous les élèves de Terminale générale.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="cours-list-grid">
+
+        <div class="cours-subject-card">
+            <span class="subject-badge">Tronc commun</span>
+            <h2>🧠 Philosophie</h2>
+            <p>Réflexion, notions, auteurs, dissertations et explications de texte.</p>
+            <button type="button">Bientôt : ouvrir</button>
+        </div>
+
+        <div class="cours-subject-card">
+            <span class="subject-badge">Tronc commun</span>
+            <h2>🌍 Histoire-géographie</h2>
+            <p>Histoire contemporaine, géographie des territoires, mondialisation et enjeux politiques.</p>
+            <button type="button">Bientôt : ouvrir</button>
+        </div>
+
+        <div class="cours-subject-card">
+            <span class="subject-badge">Tronc commun</span>
+            <h2>🇬🇧 Langue vivante A</h2>
+            <p>Compréhension, expression écrite et orale, civilisation et entraînement au bac.</p>
+            <button type="button">Bientôt : ouvrir</button>
+        </div>
+
+        <div class="cours-subject-card">
+            <span class="subject-badge">Tronc commun</span>
+            <h2>🌐 Langue vivante B</h2>
+            <p>Deuxième langue vivante : expression, compréhension et culture.</p>
+            <button type="button">Bientôt : ouvrir</button>
+        </div>
+
+        <div class="cours-subject-card">
+            <span class="subject-badge">Tronc commun</span>
+            <h2>🔬 Enseignement scientifique</h2>
+            <p>Sciences, environnement, énergie, Terre, matière, numérique et raisonnement scientifique.</p>
+            <button type="button">Bientôt : ouvrir</button>
+        </div>
+
+        <div class="cours-subject-card">
+            <span class="subject-badge">Tronc commun</span>
+            <h2>⚖️ EMC</h2>
+            <p>Enseignement moral et civique : démocratie, citoyenneté, justice et institutions.</p>
+            <button type="button">Bientôt : ouvrir</button>
+        </div>
+
+        <div class="cours-subject-card">
+            <span class="subject-badge">Tronc commun</span>
+            <h2>🏃 EPS</h2>
+            <p>Éducation physique et sportive : pratique, performance, santé et engagement.</p>
+            <button type="button">Bientôt : ouvrir</button>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
