@@ -49,6 +49,8 @@ public class PageController {
                     .anyMatch(role -> role.equals("ROLE_ADMIN"));
 
             model.addAttribute("isAdmin", isAdmin);
+        } else {
+            model.addAttribute("isAdmin", false);
         }
     }
 }
