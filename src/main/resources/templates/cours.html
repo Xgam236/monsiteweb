@@ -2,26 +2,10 @@
 <html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title th:text="${chapitre}">Chapitre</title>
+    <title>Cours</title>
 
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/cours.css">
-    <link rel="stylesheet" href="/cours-chapitre.css">
-
-    <script th:inline="none">
-        window.MathJax = {
-            tex: {
-                inlineMath: [
-                    ['\\(', '\\)']
-                ],
-                displayMath: [
-                    ['\\[', '\\]']
-                ]
-            }
-        };
-    </script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body class="dashboard-body theme-cours">
@@ -29,7 +13,7 @@
 <nav class="premium-navbar">
 
     <div class="nav-brand">
-        📘 Chapitre
+        📗 Cours
     </div>
 
     <div class="nav-center">
@@ -61,193 +45,117 @@
 
 </nav>
 
-<main class="chapter-main">
+<main class="cours-main">
 
-    <section class="chapter-hero">
+    <section class="cours-hero">
 
-        <div class="chapter-hero-content">
+        <div class="cours-hero-content">
 
-            <a href="/cours" class="chapter-back-link">
-                ← Retour aux cours
-            </a>
+            <div class="cours-pill">
+                Terminale générale — France
+            </div>
 
-            <p class="chapter-small" th:text="${matiere}">
-                Matière
-            </p>
-
-            <h1 th:text="${chapitre}">
-                Titre du chapitre
+            <h1>
+                Choisis ta catégorie de cours 📗
             </h1>
 
-            <p th:text="${course.resume}">
-                Résumé
+            <p>
+                Retrouve les cours de Terminale générale organisés proprement :
+                tronc commun, spécialités, chapitres, résumés, explications,
+                vidéos et quiz de révision.
             </p>
 
-            <div class="chapter-actions">
-                <a th:href="@{/fiche}" class="chapter-main-btn">
-                    Créer une fiche liée
+            <div class="cours-hero-actions">
+                <a href="/cours/tronc-commun" class="cours-main-action">
+                    Tronc commun
                 </a>
 
-                <a href="#quiz" class="chapter-secondary-btn">
-                    Faire le quiz
+                <a href="/cours/specialites" class="cours-secondary-action">
+                    Spécialités
                 </a>
             </div>
 
         </div>
 
-        <div class="chapter-visual" th:classappend="' visual-' + ${course.type}">
+        <div class="cours-hero-panel">
 
-            <div class="visual-orb orb-one"></div>
-            <div class="visual-orb orb-two"></div>
-
-            <div class="visual-card">
-                <span>📚</span>
-                <strong th:text="${matiere}">Matière</strong>
-                <p th:text="${chapitre}">Chapitre</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="chapter-grid">
-
-        <article class="chapter-card">
-            <div class="chapter-card-header">
-                <span>01</span>
-                <h2>Notions essentielles</h2>
-            </div>
-
-            <ul class="chapter-list">
-                <li th:each="point : ${course.keyPoints}" th:text="${point}">
-                    Notion
-                </li>
-            </ul>
-        </article>
-
-        <article class="chapter-card">
-            <div class="chapter-card-header">
-                <span>02</span>
-                <h2>Méthode à retenir</h2>
-            </div>
-
-            <ol class="chapter-list">
-                <li th:each="step : ${course.methodSteps}" th:text="${step}">
-                    Étape
-                </li>
-            </ol>
-        </article>
-
-    </section>
-
-    <section class="chapter-card wide">
-
-        <div class="chapter-card-header">
-            <span>03</span>
-            <h2>Formules, repères ou idées clés</h2>
-        </div>
-
-        <div class="formula-grid">
-            <div class="formula-box" th:each="formula : ${course.formulas}" th:text="${formula}">
-                Formule
-            </div>
-        </div>
-
-    </section>
-
-    <section class="chapter-card wide">
-
-        <div class="chapter-card-header">
-            <span>04</span>
-            <h2>Explication complète du chapitre</h2>
-        </div>
-
-        <div class="explanation-grid">
-
-            <div class="explanation-block">
-                <h3>Comprendre le chapitre</h3>
-                <p>
-                    Ce chapitre doit d’abord être compris avant d’être appris. Il faut repérer
-                    les mots-clés, les mécanismes importants et les méthodes qui reviennent
-                    souvent dans les exercices ou les questions de cours.
-                </p>
-            </div>
-
-            <div class="explanation-block">
-                <h3>Ce qu’il faut savoir faire</h3>
-                <p>
-                    À la fin du chapitre, tu dois être capable d’expliquer les notions avec tes mots,
-                    d’utiliser un exemple précis, et de répondre à une question en construisant
-                    un raisonnement clair.
-                </p>
-            </div>
-
-            <div class="explanation-block">
-                <h3>Erreurs fréquentes</h3>
-                <p>
-                    L’erreur la plus fréquente est d’apprendre des phrases sans comprendre leur sens.
-                    Il faut toujours relier une définition à un exemple ou à une méthode.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="chapter-card wide">
-
-        <div class="chapter-card-header">
-            <span>05</span>
-            <h2>Vidéos explicatives</h2>
-        </div>
-
-        <div class="video-grid">
-
-            <a th:each="video : ${course.videos}"
-               th:href="${video.url}"
-               target="_blank"
-               class="video-card">
-
-                <div class="video-thumbnail">
-                    ▶
-                </div>
-
+            <div class="cours-floating-card">
+                <span>🎓</span>
                 <div>
-                    <h3 th:text="${video.title}">Titre vidéo</h3>
-                    <p>
-                        Ouvre la vidéo explicative dans un nouvel onglet.
-                    </p>
+                    <strong>Terminale</strong>
+                    <p>Programme lycée général</p>
                 </div>
+            </div>
 
-            </a>
+            <div class="cours-floating-card">
+                <span>📚</span>
+                <div>
+                    <strong>Chapitres</strong>
+                    <p>Classés par matière</p>
+                </div>
+            </div>
+
+            <div class="cours-floating-card">
+                <span>🚀</span>
+                <div>
+                    <strong>Révisions</strong>
+                    <p>Cours, vidéos et quiz</p>
+                </div>
+            </div>
 
         </div>
 
     </section>
 
-    <section class="chapter-card wide" id="quiz">
+    <section class="cours-choice-grid">
 
-        <div class="chapter-card-header">
-            <span>06</span>
-            <h2>Quiz de fin</h2>
-        </div>
+        <a href="/cours/tronc-commun" class="cours-choice-card tronc-card">
 
-        <div class="quiz-grid">
+            <div class="choice-icon">
+                🏛
+            </div>
 
-            <details class="quiz-question" th:each="question, iter : ${course.quiz}">
-                <summary>
-                    <span th:text="${iter.index + 1}">1</span>
-                    <strong th:text="${question.question}">
-                        Question
-                    </strong>
-                </summary>
+            <div>
+                <p class="welcome-small">Catégorie 1</p>
 
-                <p th:text="${question.answer}">
-                    Réponse
+                <h2>Tronc commun</h2>
+
+                <p>
+                    Accède aux matières communes de Terminale générale :
+                    philosophie, histoire-géographie, langues vivantes,
+                    enseignement scientifique, EMC, EPS et Grand Oral.
                 </p>
-            </details>
+            </div>
 
-        </div>
+            <span class="choice-arrow">
+                Ouvrir →
+            </span>
+
+        </a>
+
+        <a href="/cours/specialites" class="cours-choice-card spe-card">
+
+            <div class="choice-icon">
+                ⭐
+            </div>
+
+            <div>
+                <p class="welcome-small">Catégorie 2</p>
+
+                <h2>Spécialités</h2>
+
+                <p>
+                    Accède aux enseignements de spécialité :
+                    mathématiques, physique-chimie, SVT, SES, HGGSP,
+                    HLP, NSI, langues, arts, sport et plus encore.
+                </p>
+            </div>
+
+            <span class="choice-arrow">
+                Ouvrir →
+            </span>
+
+        </a>
 
     </section>
 
