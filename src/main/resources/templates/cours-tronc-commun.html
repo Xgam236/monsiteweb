@@ -58,6 +58,7 @@
             <h1>Tronc commun</h1>
             <p>
                 Clique sur une matière pour afficher tous les chapitres et notions à réviser.
+                Chaque chapitre ouvre une page complète avec résumé, explications, vidéos et quiz.
             </p>
         </div>
 
@@ -76,23 +77,23 @@
             </summary>
 
             <div class="chapter-list">
-                <div class="chapter-item">Chapitre 1 — L’art</div>
-                <div class="chapter-item">Chapitre 2 — Le bonheur</div>
-                <div class="chapter-item">Chapitre 3 — La conscience</div>
-                <div class="chapter-item">Chapitre 4 — Le devoir</div>
-                <div class="chapter-item">Chapitre 5 — L’État</div>
-                <div class="chapter-item">Chapitre 6 — L’inconscient</div>
-                <div class="chapter-item">Chapitre 7 — La justice</div>
-                <div class="chapter-item">Chapitre 8 — Le langage</div>
-                <div class="chapter-item">Chapitre 9 — La liberté</div>
-                <div class="chapter-item">Chapitre 10 — La nature</div>
-                <div class="chapter-item">Chapitre 11 — La raison</div>
-                <div class="chapter-item">Chapitre 12 — La religion</div>
-                <div class="chapter-item">Chapitre 13 — La science</div>
-                <div class="chapter-item">Chapitre 14 — La technique</div>
-                <div class="chapter-item">Chapitre 15 — Le temps</div>
-                <div class="chapter-item">Chapitre 16 — Le travail</div>
-                <div class="chapter-item">Chapitre 17 — La vérité</div>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='L’art')}">Chapitre 1 — L’art</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='Le bonheur')}">Chapitre 2 — Le bonheur</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La conscience')}">Chapitre 3 — La conscience</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='Le devoir')}">Chapitre 4 — Le devoir</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='L’État')}">Chapitre 5 — L’État</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='L’inconscient')}">Chapitre 6 — L’inconscient</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La justice')}">Chapitre 7 — La justice</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='Le langage')}">Chapitre 8 — Le langage</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La liberté')}">Chapitre 9 — La liberté</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La nature')}">Chapitre 10 — La nature</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La raison')}">Chapitre 11 — La raison</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La religion')}">Chapitre 12 — La religion</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La science')}">Chapitre 13 — La science</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La technique')}">Chapitre 14 — La technique</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='Le temps')}">Chapitre 15 — Le temps</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='Le travail')}">Chapitre 16 — Le travail</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Philosophie', chapitre='La vérité')}">Chapitre 17 — La vérité</a>
             </div>
         </details>
 
@@ -109,20 +110,36 @@
             <div class="chapter-group">
                 <h3>Histoire — Les relations entre les puissances et les modèles politiques</h3>
                 <div class="chapter-list">
-                    <div class="chapter-item">Fragilités des démocraties, totalitarismes et Seconde Guerre mondiale</div>
-                    <div class="chapter-item">La multiplication des acteurs internationaux dans un monde bipolaire</div>
-                    <div class="chapter-item">Les remises en cause économiques, politiques et sociales des années 1970 à 1991</div>
-                    <div class="chapter-item">Le monde, l’Europe et la France depuis les années 1990</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Histoire-géographie', chapitre='Fragilités des démocraties, totalitarismes et Seconde Guerre mondiale')}">
+                        Fragilités des démocraties, totalitarismes et Seconde Guerre mondiale
+                    </a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Histoire-géographie', chapitre='La multiplication des acteurs internationaux dans un monde bipolaire')}">
+                        La multiplication des acteurs internationaux dans un monde bipolaire
+                    </a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Histoire-géographie', chapitre='Les remises en cause économiques, politiques et sociales des années 1970 à 1991')}">
+                        Les remises en cause économiques, politiques et sociales des années 1970 à 1991
+                    </a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Histoire-géographie', chapitre='Le monde, l’Europe et la France depuis les années 1990')}">
+                        Le monde, l’Europe et la France depuis les années 1990
+                    </a>
                 </div>
             </div>
 
             <div class="chapter-group">
                 <h3>Géographie — Les territoires dans la mondialisation</h3>
                 <div class="chapter-list">
-                    <div class="chapter-item">Mers et océans au cœur de la mondialisation</div>
-                    <div class="chapter-item">Dynamiques territoriales, coopérations et tensions dans la mondialisation</div>
-                    <div class="chapter-item">L’Union européenne dans la mondialisation</div>
-                    <div class="chapter-item">La France et ses régions dans l’Union européenne et dans la mondialisation</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Histoire-géographie', chapitre='Mers et océans au cœur de la mondialisation')}">
+                        Mers et océans au cœur de la mondialisation
+                    </a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Histoire-géographie', chapitre='Dynamiques territoriales, coopérations et tensions dans la mondialisation')}">
+                        Dynamiques territoriales, coopérations et tensions dans la mondialisation
+                    </a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Histoire-géographie', chapitre='L’Union européenne dans la mondialisation')}">
+                        L’Union européenne dans la mondialisation
+                    </a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Histoire-géographie', chapitre='La France et ses régions dans l’Union européenne et dans la mondialisation')}">
+                        La France et ses régions dans l’Union européenne et dans la mondialisation
+                    </a>
                 </div>
             </div>
         </details>
@@ -140,29 +157,29 @@
             <div class="chapter-group">
                 <h3>Science, climat et société</h3>
                 <div class="chapter-list">
-                    <div class="chapter-item">Chapitre 1 — L’atmosphère terrestre et la vie</div>
-                    <div class="chapter-item">Chapitre 2 — La complexité du système climatique</div>
-                    <div class="chapter-item">Chapitre 3 — Le climat du futur</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='L’atmosphère terrestre et la vie')}">Chapitre 1 — L’atmosphère terrestre et la vie</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='La complexité du système climatique')}">Chapitre 2 — La complexité du système climatique</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='Le climat du futur')}">Chapitre 3 — Le climat du futur</a>
                 </div>
             </div>
 
             <div class="chapter-group">
                 <h3>Le futur des énergies</h3>
                 <div class="chapter-list">
-                    <div class="chapter-item">Chapitre 1 — Deux siècles d’énergie électrique</div>
-                    <div class="chapter-item">Chapitre 2 — Conversion et transport de l’énergie électrique</div>
-                    <div class="chapter-item">Chapitre 3 — Énergie, choix de développement et futur climatique</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='Deux siècles d’énergie électrique')}">Chapitre 1 — Deux siècles d’énergie électrique</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='Conversion et transport de l’énergie électrique')}">Chapitre 2 — Conversion et transport de l’énergie électrique</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='Énergie, choix de développement et futur climatique')}">Chapitre 3 — Énergie, choix de développement et futur climatique</a>
                 </div>
             </div>
 
             <div class="chapter-group">
                 <h3>Une histoire du vivant</h3>
                 <div class="chapter-list">
-                    <div class="chapter-item">Chapitre 1 — La biodiversité et son évolution</div>
-                    <div class="chapter-item">Chapitre 2 — L’évolution comme grille de lecture du monde</div>
-                    <div class="chapter-item">Chapitre 3 — L’évolution humaine</div>
-                    <div class="chapter-item">Chapitre 4 — Les modèles démographiques</div>
-                    <div class="chapter-item">Chapitre 5 — De la machine de Turing à l’intelligence artificielle</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='La biodiversité et son évolution')}">Chapitre 1 — La biodiversité et son évolution</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='L’évolution comme grille de lecture du monde')}">Chapitre 2 — L’évolution comme grille de lecture du monde</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='L’évolution humaine')}">Chapitre 3 — L’évolution humaine</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='Les modèles démographiques')}">Chapitre 4 — Les modèles démographiques</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Enseignement scientifique', chapitre='De la machine de Turing à l’intelligence artificielle')}">Chapitre 5 — De la machine de Turing à l’intelligence artificielle</a>
                 </div>
             </div>
         </details>
@@ -178,14 +195,14 @@
             </summary>
 
             <div class="chapter-list">
-                <div class="chapter-item">Identités et échanges</div>
-                <div class="chapter-item">Espace privé et espace public</div>
-                <div class="chapter-item">Art et pouvoir</div>
-                <div class="chapter-item">Citoyenneté et mondes virtuels</div>
-                <div class="chapter-item">Fictions et réalités</div>
-                <div class="chapter-item">Innovations scientifiques et responsabilité</div>
-                <div class="chapter-item">Diversité et inclusion</div>
-                <div class="chapter-item">Territoire et mémoire</div>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante A', chapitre='Identités et échanges')}">Identités et échanges</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante A', chapitre='Espace privé et espace public')}">Espace privé et espace public</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante A', chapitre='Art et pouvoir')}">Art et pouvoir</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante A', chapitre='Citoyenneté et mondes virtuels')}">Citoyenneté et mondes virtuels</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante A', chapitre='Fictions et réalités')}">Fictions et réalités</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante A', chapitre='Innovations scientifiques et responsabilité')}">Innovations scientifiques et responsabilité</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante A', chapitre='Diversité et inclusion')}">Diversité et inclusion</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante A', chapitre='Territoire et mémoire')}">Territoire et mémoire</a>
             </div>
         </details>
 
@@ -200,14 +217,14 @@
             </summary>
 
             <div class="chapter-list">
-                <div class="chapter-item">Identités et échanges</div>
-                <div class="chapter-item">Espace privé et espace public</div>
-                <div class="chapter-item">Art et pouvoir</div>
-                <div class="chapter-item">Citoyenneté et mondes virtuels</div>
-                <div class="chapter-item">Fictions et réalités</div>
-                <div class="chapter-item">Innovations scientifiques et responsabilité</div>
-                <div class="chapter-item">Diversité et inclusion</div>
-                <div class="chapter-item">Territoire et mémoire</div>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante B', chapitre='Identités et échanges')}">Identités et échanges</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante B', chapitre='Espace privé et espace public')}">Espace privé et espace public</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante B', chapitre='Art et pouvoir')}">Art et pouvoir</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante B', chapitre='Citoyenneté et mondes virtuels')}">Citoyenneté et mondes virtuels</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante B', chapitre='Fictions et réalités')}">Fictions et réalités</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante B', chapitre='Innovations scientifiques et responsabilité')}">Innovations scientifiques et responsabilité</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante B', chapitre='Diversité et inclusion')}">Diversité et inclusion</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Langue vivante B', chapitre='Territoire et mémoire')}">Territoire et mémoire</a>
             </div>
         </details>
 
@@ -222,11 +239,11 @@
             </summary>
 
             <div class="chapter-list">
-                <div class="chapter-item">La démocratie, les institutions et la citoyenneté</div>
-                <div class="chapter-item">L’engagement politique et citoyen</div>
-                <div class="chapter-item">Libertés, droits et responsabilités</div>
-                <div class="chapter-item">Justice, égalité et débat démocratique</div>
-                <div class="chapter-item">La République et ses valeurs</div>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EMC', chapitre='La démocratie, les institutions et la citoyenneté')}">La démocratie, les institutions et la citoyenneté</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EMC', chapitre='L’engagement politique et citoyen')}">L’engagement politique et citoyen</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EMC', chapitre='Libertés, droits et responsabilités')}">Libertés, droits et responsabilités</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EMC', chapitre='Justice, égalité et débat démocratique')}">Justice, égalité et débat démocratique</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EMC', chapitre='La République et ses valeurs')}">La République et ses valeurs</a>
             </div>
         </details>
 
@@ -241,11 +258,11 @@
             </summary>
 
             <div class="chapter-list">
-                <div class="chapter-item">Développer sa motricité</div>
-                <div class="chapter-item">S’entraîner et se préparer</div>
-                <div class="chapter-item">Santé, effort et performance</div>
-                <div class="chapter-item">Coopération, règles et engagement</div>
-                <div class="chapter-item">Analyse de sa pratique sportive</div>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPS', chapitre='Développer sa motricité')}">Développer sa motricité</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPS', chapitre='S’entraîner et se préparer')}">S’entraîner et se préparer</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPS', chapitre='Santé, effort et performance')}">Santé, effort et performance</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPS', chapitre='Coopération, règles et engagement')}">Coopération, règles et engagement</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPS', chapitre='Analyse de sa pratique sportive')}">Analyse de sa pratique sportive</a>
             </div>
         </details>
 
@@ -260,13 +277,13 @@
             </summary>
 
             <div class="chapter-list">
-                <div class="chapter-item">Comprendre le déroulement de l’épreuve</div>
-                <div class="chapter-item">Choisir une question de Grand Oral</div>
-                <div class="chapter-item">Construire un plan clair</div>
-                <div class="chapter-item">Préparer l’introduction et la conclusion</div>
-                <div class="chapter-item">S’entraîner à parler sans lire</div>
-                <div class="chapter-item">Répondre aux questions du jury</div>
-                <div class="chapter-item">Présenter son projet d’orientation</div>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Grand Oral', chapitre='Comprendre le déroulement de l’épreuve')}">Comprendre le déroulement de l’épreuve</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Grand Oral', chapitre='Choisir une question de Grand Oral')}">Choisir une question de Grand Oral</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Grand Oral', chapitre='Construire un plan clair')}">Construire un plan clair</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Grand Oral', chapitre='Préparer l’introduction et la conclusion')}">Préparer l’introduction et la conclusion</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Grand Oral', chapitre='S’entraîner à parler sans lire')}">S’entraîner à parler sans lire</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Grand Oral', chapitre='Répondre aux questions du jury')}">Répondre aux questions du jury</a>
+                <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Grand Oral', chapitre='Présenter son projet d’orientation')}">Présenter son projet d’orientation</a>
             </div>
         </details>
 

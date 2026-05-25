@@ -1,0 +1,486 @@
+/* ========================= */
+/* PAGE CHAPITRE COURS */
+/* ========================= */
+
+.chapter-main {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 42px 28px 70px;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.chapter-hero {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 28px;
+    margin-bottom: 30px;
+}
+
+.chapter-hero-content,
+.chapter-visual,
+.chapter-card {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(187, 247, 208, 0.55);
+    box-shadow: 0 18px 45px rgba(22, 163, 74, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 28px;
+}
+
+.chapter-hero-content {
+    padding: 42px;
+}
+
+.chapter-back-link {
+    display: inline-flex;
+    text-decoration: none;
+    background: rgba(240, 253, 244, 0.96);
+    color: #15803d;
+    border: 1px solid rgba(22, 163, 74, 0.18);
+    padding: 11px 15px;
+    border-radius: 14px;
+    font-weight: 900;
+    margin-bottom: 22px;
+    transition: 0.25s ease;
+}
+
+.chapter-back-link:hover {
+    transform: translateY(-2px);
+}
+
+.chapter-small {
+    margin: 0 0 10px;
+    color: #15803d;
+    font-size: 0.86rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.chapter-hero-content h1 {
+    margin: 0 0 16px;
+    color: #14532d;
+    font-size: 2.45rem;
+    line-height: 1.08;
+}
+
+.chapter-hero-content p {
+    margin: 0;
+    color: #4b6354;
+    line-height: 1.8;
+}
+
+/* ========================= */
+/* BOUTONS */
+/* ========================= */
+
+.chapter-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.chapter-main-btn,
+.chapter-secondary-btn {
+    text-decoration: none;
+    padding: 13px 18px;
+    border-radius: 15px;
+    font-weight: 900;
+    transition: 0.25s ease;
+}
+
+.chapter-main-btn {
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    color: white;
+    box-shadow: 0 14px 28px rgba(22, 163, 74, 0.22);
+}
+
+.chapter-secondary-btn {
+    background: rgba(240, 253, 244, 0.96);
+    color: #15803d;
+    border: 1px solid rgba(22, 163, 74, 0.18);
+}
+
+.chapter-main-btn:hover,
+.chapter-secondary-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ========================= */
+/* VISUEL */
+/* ========================= */
+
+.chapter-visual {
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-math {
+    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(239,246,255,0.95));
+}
+
+.visual-science,
+.visual-svt {
+    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(236,253,245,0.95));
+}
+
+.visual-geo {
+    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(254,243,199,0.95));
+}
+
+.visual-philo {
+    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(250,245,255,0.95));
+}
+
+.visual-ses {
+    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(240,253,244,0.95));
+}
+
+.visual-nsi {
+    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(219,234,254,0.95));
+}
+
+.visual-generic {
+    background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(240,253,244,0.95));
+}
+
+.visual-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.orb-one {
+    width: 220px;
+    height: 220px;
+    top: -70px;
+    right: -50px;
+}
+
+.orb-two {
+    width: 170px;
+    height: 170px;
+    bottom: -60px;
+    left: -45px;
+}
+
+.visual-card {
+    position: relative;
+    z-index: 2;
+    width: min(320px, 80%);
+    padding: 28px;
+    border-radius: 24px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 18px 38px rgba(22, 163, 74, 0.14);
+}
+
+.visual-card span {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 14px;
+}
+
+.visual-card strong {
+    display: block;
+    color: #14532d;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.visual-card p {
+    margin: 0;
+    color: #4b6354;
+    line-height: 1.6;
+}
+
+/* ========================= */
+/* CARTES */
+/* ========================= */
+
+.chapter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.chapter-card {
+    padding: 28px;
+    margin-bottom: 24px;
+}
+
+.chapter-card.wide {
+    width: 100%;
+}
+
+.chapter-card-header {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chapter-card-header span {
+    width: 42px;
+    height: 42px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    color: white;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chapter-card-header h2 {
+    margin: 0;
+    color: #14532d;
+    font-size: 1.45rem;
+}
+
+.chapter-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #31523c;
+    line-height: 1.9;
+    font-weight: 650;
+}
+
+.chapter-list li {
+    margin-bottom: 8px;
+}
+
+/* ========================= */
+/* FORMULES / REPERES */
+/* ========================= */
+
+.formula-grid,
+.video-grid,
+.quiz-grid,
+.explanation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.formula-box {
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(240, 253, 244, 0.92);
+    border: 1px solid rgba(22, 163, 74, 0.12);
+    color: #14532d;
+    font-weight: 900;
+    overflow-x: auto;
+    line-height: 1.7;
+}
+
+/* ========================= */
+/* EXPLICATIONS */
+/* ========================= */
+
+.explanation-block {
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(240, 253, 244, 0.92);
+    border: 1px solid rgba(22, 163, 74, 0.12);
+}
+
+.explanation-block h3 {
+    margin: 0 0 10px;
+    color: #14532d;
+}
+
+.explanation-block p {
+    margin: 0;
+    color: #4b6354;
+    line-height: 1.8;
+}
+
+/* ========================= */
+/* VIDEOS */
+/* ========================= */
+
+.video-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 18px;
+    border-radius: 20px;
+    background: rgba(240, 253, 244, 0.92);
+    border: 1px solid rgba(22, 163, 74, 0.12);
+    transition: 0.25s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    background: white;
+    box-shadow: 0 18px 32px rgba(22, 163, 74, 0.12);
+}
+
+.video-thumbnail {
+    min-width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 14px 24px rgba(22, 163, 74, 0.18);
+}
+
+.video-card h3 {
+    margin: 0 0 6px;
+    color: #14532d;
+    font-size: 1rem;
+}
+
+.video-card p {
+    margin: 0;
+    color: #4b6354;
+    line-height: 1.5;
+}
+
+/* ========================= */
+/* QUIZ */
+/* ========================= */
+
+.quiz-question {
+    border-radius: 20px;
+    background: rgba(240, 253, 244, 0.92);
+    border: 1px solid rgba(22, 163, 74, 0.12);
+    padding: 0;
+    overflow: hidden;
+}
+
+.quiz-question summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 18px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.quiz-question summary::-webkit-details-marker {
+    display: none;
+}
+
+.quiz-question summary span {
+    min-width: 36px;
+    height: 36px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.quiz-question summary strong {
+    color: #14532d;
+    line-height: 1.5;
+}
+
+.quiz-question p {
+    margin: 0;
+    padding: 0 18px 18px 66px;
+    color: #4b6354;
+    line-height: 1.7;
+}
+
+.quiz-question[open] {
+    background: white;
+    box-shadow: 0 14px 28px rgba(22, 163, 74, 0.10);
+}
+
+/* ========================= */
+/* MATHJAX */
+/* ========================= */
+
+mjx-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+}
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+.chapter-hero,
+.chapter-grid,
+.chapter-card {
+    animation: chapterFadeUp 0.55s ease both;
+}
+
+@keyframes chapterFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 950px) {
+    .chapter-hero,
+    .chapter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chapter-visual {
+        min-height: 260px;
+    }
+}
+
+@media (max-width: 700px) {
+    .chapter-main {
+        padding: 28px 16px 52px;
+    }
+
+    .chapter-hero-content,
+    .chapter-card {
+        padding: 24px;
+    }
+
+    .chapter-hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .chapter-card-header {
+        align-items: flex-start;
+    }
+
+    .chapter-card-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .video-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quiz-question p {
+        padding: 0 18px 18px 18px;
+    }
+}

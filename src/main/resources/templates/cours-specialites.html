@@ -58,6 +58,7 @@
             <h1>Spécialités</h1>
             <p>
                 Clique sur une spécialité pour afficher ses grands chapitres de Terminale.
+                Chaque chapitre ouvre une page complète avec cours résumé, explications, vidéos et quiz.
             </p>
         </div>
 
@@ -85,36 +86,36 @@
                 <div class="chapter-group">
                     <h3>Algèbre et géométrie</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Combinatoire et dénombrement</div>
-                        <div class="chapter-item">Vecteurs, droites et plans de l’espace</div>
-                        <div class="chapter-item">Orthogonalité et distances dans l’espace</div>
-                        <div class="chapter-item">Équations de droites et de plans</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Combinatoire et dénombrement')}">Combinatoire et dénombrement</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Vecteurs, droites et plans de l’espace')}">Vecteurs, droites et plans de l’espace</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Orthogonalité et distances dans l’espace')}">Orthogonalité et distances dans l’espace</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Équations de droites et de plans')}">Équations de droites et de plans</a>
                     </div>
                 </div>
 
                 <div class="chapter-group">
                     <h3>Analyse</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Suites numériques</div>
-                        <div class="chapter-item">Limites de suites</div>
-                        <div class="chapter-item">Limites de fonctions</div>
-                        <div class="chapter-item">Continuité</div>
-                        <div class="chapter-item">Dérivation et convexité</div>
-                        <div class="chapter-item">Fonction logarithme népérien</div>
-                        <div class="chapter-item">Fonction exponentielle</div>
-                        <div class="chapter-item">Primitives</div>
-                        <div class="chapter-item">Équations différentielles</div>
-                        <div class="chapter-item">Calcul intégral</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Suites numériques')}">Suites numériques</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Limites de suites')}">Limites de suites</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Limites de fonctions')}">Limites de fonctions</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Continuité')}">Continuité</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Dérivation et convexité')}">Dérivation et convexité</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Fonction logarithme népérien')}">Fonction logarithme népérien</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Fonction exponentielle')}">Fonction exponentielle</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Primitives')}">Primitives</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Équations différentielles')}">Équations différentielles</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Calcul intégral')}">Calcul intégral</a>
                     </div>
                 </div>
 
                 <div class="chapter-group">
                     <h3>Probabilités</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Variables aléatoires</div>
-                        <div class="chapter-item">Loi binomiale</div>
-                        <div class="chapter-item">Sommes de variables aléatoires</div>
-                        <div class="chapter-item">Concentration, loi des grands nombres</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Variables aléatoires')}">Variables aléatoires</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Loi binomiale')}">Loi binomiale</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Sommes de variables aléatoires')}">Sommes de variables aléatoires</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Mathématiques', chapitre='Concentration, loi des grands nombres')}">Concentration, loi des grands nombres</a>
                     </div>
                 </div>
             </details>
@@ -132,42 +133,42 @@
                 <div class="chapter-group">
                     <h3>Constitution et transformations de la matière</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Transformations acide-base</div>
-                        <div class="chapter-item">Méthodes physiques d’analyse</div>
-                        <div class="chapter-item">Cinétique chimique</div>
-                        <div class="chapter-item">Équilibres chimiques</div>
-                        <div class="chapter-item">Stratégie de synthèse organique</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Transformations acide-base')}">Transformations acide-base</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Méthodes physiques d’analyse')}">Méthodes physiques d’analyse</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Cinétique chimique')}">Cinétique chimique</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Équilibres chimiques')}">Équilibres chimiques</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Stratégie de synthèse organique')}">Stratégie de synthèse organique</a>
                     </div>
                 </div>
 
                 <div class="chapter-group">
                     <h3>Mouvement et interactions</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Cinématique du point</div>
-                        <div class="chapter-item">Lois de Newton</div>
-                        <div class="chapter-item">Mouvement dans un champ uniforme</div>
-                        <div class="chapter-item">Mouvement des satellites et planètes</div>
-                        <div class="chapter-item">Fluides et pression</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Cinématique du point')}">Cinématique du point</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Lois de Newton')}">Lois de Newton</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Mouvement dans un champ uniforme')}">Mouvement dans un champ uniforme</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Mouvement des satellites et planètes')}">Mouvement des satellites et planètes</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Fluides et pression')}">Fluides et pression</a>
                     </div>
                 </div>
 
                 <div class="chapter-group">
                     <h3>Énergie : conversions et transferts</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Travail d’une force</div>
-                        <div class="chapter-item">Énergie mécanique</div>
-                        <div class="chapter-item">Premier principe de la thermodynamique</div>
-                        <div class="chapter-item">Transferts thermiques</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Travail d’une force')}">Travail d’une force</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Énergie mécanique')}">Énergie mécanique</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Premier principe de la thermodynamique')}">Premier principe de la thermodynamique</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Transferts thermiques')}">Transferts thermiques</a>
                     </div>
                 </div>
 
                 <div class="chapter-group">
                     <h3>Ondes et signaux</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Lunette astronomique</div>
-                        <div class="chapter-item">Diffraction et interférences</div>
-                        <div class="chapter-item">Effet Doppler</div>
-                        <div class="chapter-item">Condensateur et circuits électriques</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Lunette astronomique')}">Lunette astronomique</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Diffraction et interférences')}">Diffraction et interférences</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Effet Doppler')}">Effet Doppler</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Physique-chimie', chapitre='Condensateur et circuits électriques')}">Condensateur et circuits électriques</a>
                     </div>
                 </div>
             </details>
@@ -185,33 +186,33 @@
                 <div class="chapter-group">
                     <h3>La Terre, la vie et l’organisation du vivant</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Génétique et évolution</div>
-                        <div class="chapter-item">Origine du génotype des individus</div>
-                        <div class="chapter-item">Diversification du vivant</div>
-                        <div class="chapter-item">Temps et roches</div>
-                        <div class="chapter-item">Traces du passé mouvementé de la Terre</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Génétique et évolution')}">Génétique et évolution</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Origine du génotype des individus')}">Origine du génotype des individus</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Diversification du vivant')}">Diversification du vivant</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Temps et roches')}">Temps et roches</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Traces du passé mouvementé de la Terre')}">Traces du passé mouvementé de la Terre</a>
                     </div>
                 </div>
 
                 <div class="chapter-group">
                     <h3>Enjeux contemporains de la planète</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Organisation fonctionnelle des plantes</div>
-                        <div class="chapter-item">Production de matière organique</div>
-                        <div class="chapter-item">Reproduction des plantes</div>
-                        <div class="chapter-item">Climats de la Terre</div>
-                        <div class="chapter-item">Impacts des activités humaines sur les écosystèmes</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Organisation fonctionnelle des plantes')}">Organisation fonctionnelle des plantes</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Production de matière organique')}">Production de matière organique</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Reproduction des plantes')}">Reproduction des plantes</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Climats de la Terre')}">Climats de la Terre</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Impacts des activités humaines sur les écosystèmes')}">Impacts des activités humaines sur les écosystèmes</a>
                     </div>
                 </div>
 
                 <div class="chapter-group">
                     <h3>Corps humain et santé</h3>
                     <div class="chapter-list">
-                        <div class="chapter-item">Comportements, mouvement et système nerveux</div>
-                        <div class="chapter-item">Réflexe myotatique</div>
-                        <div class="chapter-item">Cerveau, mouvement volontaire et plasticité</div>
-                        <div class="chapter-item">Stress aigu et stress chronique</div>
-                        <div class="chapter-item">Système immunitaire</div>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Comportements, mouvement et système nerveux')}">Comportements, mouvement et système nerveux</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Réflexe myotatique')}">Réflexe myotatique</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Cerveau, mouvement volontaire et plasticité')}">Cerveau, mouvement volontaire et plasticité</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Stress aigu et stress chronique')}">Stress aigu et stress chronique</a>
+                        <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SVT', chapitre='Système immunitaire')}">Système immunitaire</a>
                     </div>
                 </div>
             </details>
@@ -227,18 +228,18 @@
                 </summary>
 
                 <div class="chapter-list">
-                    <div class="chapter-item">Structures de données</div>
-                    <div class="chapter-item">Bases de données</div>
-                    <div class="chapter-item">Architectures matérielles et systèmes d’exploitation</div>
-                    <div class="chapter-item">Réseaux et protocoles de routage</div>
-                    <div class="chapter-item">Langages et programmation</div>
-                    <div class="chapter-item">Récursivité</div>
-                    <div class="chapter-item">Programmation orientée objet</div>
-                    <div class="chapter-item">Algorithmes sur les graphes</div>
-                    <div class="chapter-item">Diviser pour régner</div>
-                    <div class="chapter-item">Programmation dynamique</div>
-                    <div class="chapter-item">Recherche textuelle</div>
-                    <div class="chapter-item">Sécurisation des communications</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Structures de données')}">Structures de données</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Bases de données')}">Bases de données</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Architectures matérielles et systèmes d’exploitation')}">Architectures matérielles et systèmes d’exploitation</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Réseaux et protocoles de routage')}">Réseaux et protocoles de routage</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Langages et programmation')}">Langages et programmation</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Récursivité')}">Récursivité</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Programmation orientée objet')}">Programmation orientée objet</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Algorithmes sur les graphes')}">Algorithmes sur les graphes</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Diviser pour régner')}">Diviser pour régner</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Programmation dynamique')}">Programmation dynamique</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Recherche textuelle')}">Recherche textuelle</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='NSI', chapitre='Sécurisation des communications')}">Sécurisation des communications</a>
                 </div>
             </details>
 
@@ -253,35 +254,15 @@
                 </summary>
 
                 <div class="chapter-list">
-                    <div class="chapter-item">Analyser le besoin et le cahier des charges</div>
-                    <div class="chapter-item">Organisation fonctionnelle d’un système</div>
-                    <div class="chapter-item">Chaîne d’énergie et chaîne d’information</div>
-                    <div class="chapter-item">Modélisation des systèmes</div>
-                    <div class="chapter-item">Énergie, puissance et rendement</div>
-                    <div class="chapter-item">Mouvements, efforts et mécanique</div>
-                    <div class="chapter-item">Commande, capteurs et actionneurs</div>
-                    <div class="chapter-item">Simulation et validation</div>
-                    <div class="chapter-item">Innovation et projet d’ingénierie</div>
-                </div>
-            </details>
-
-            <details class="cours-accordion-card">
-                <summary>
-                    <div>
-                        <span class="subject-badge">Spécialité</span>
-                        <h2>🌱 Biologie-écologie</h2>
-                        <p>Vivant, environnement, agriculture et écologie.</p>
-                    </div>
-                    <strong>Ouvrir</strong>
-                </summary>
-
-                <div class="chapter-list">
-                    <div class="chapter-item">Organisation du vivant</div>
-                    <div class="chapter-item">Biodiversité et écosystèmes</div>
-                    <div class="chapter-item">Fonctionnement des agroécosystèmes</div>
-                    <div class="chapter-item">Écologie et environnement</div>
-                    <div class="chapter-item">Gestion des ressources naturelles</div>
-                    <div class="chapter-item">Santé, alimentation et développement durable</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Analyser le besoin et le cahier des charges')}">Analyser le besoin et le cahier des charges</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Organisation fonctionnelle d’un système')}">Organisation fonctionnelle d’un système</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Chaîne d’énergie et chaîne d’information')}">Chaîne d’énergie et chaîne d’information</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Modélisation des systèmes')}">Modélisation des systèmes</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Énergie, puissance et rendement')}">Énergie, puissance et rendement</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Mouvements, efforts et mécanique')}">Mouvements, efforts et mécanique</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Commande, capteurs et actionneurs')}">Commande, capteurs et actionneurs</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Simulation et validation')}">Simulation et validation</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Sciences de l’ingénieur', chapitre='Innovation et projet d’ingénierie')}">Innovation et projet d’ingénierie</a>
                 </div>
             </details>
 
@@ -308,52 +289,13 @@
                     <strong>Ouvrir</strong>
                 </summary>
 
-                <div class="chapter-group">
-                    <h3>De nouveaux espaces de conquête</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Affirmations de puissance, rivalités et coopérations</div>
-                        <div class="chapter-item">La Chine : à la conquête de l’espace, des mers et des océans</div>
-                    </div>
-                </div>
-
-                <div class="chapter-group">
-                    <h3>Faire la guerre, faire la paix</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Formes de conflits et modes de résolution</div>
-                        <div class="chapter-item">Le Moyen-Orient : conflits régionaux et tentatives de paix</div>
-                    </div>
-                </div>
-
-                <div class="chapter-group">
-                    <h3>Histoire et mémoires</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Histoire et mémoire, histoire et justice</div>
-                        <div class="chapter-item">L’histoire et les mémoires du génocide des Juifs et des Tsiganes</div>
-                    </div>
-                </div>
-
-                <div class="chapter-group">
-                    <h3>Identifier, protéger et valoriser le patrimoine</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Usages sociaux et politiques du patrimoine</div>
-                        <div class="chapter-item">La France et le patrimoine</div>
-                    </div>
-                </div>
-
-                <div class="chapter-group">
-                    <h3>L’environnement, entre exploitation et protection</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Exploiter, préserver et protéger</div>
-                        <div class="chapter-item">Le changement climatique : approches historiques et géopolitiques</div>
-                    </div>
-                </div>
-
-                <div class="chapter-group">
-                    <h3>L’enjeu de la connaissance</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Produire et diffuser des connaissances</div>
-                        <div class="chapter-item">Le cyberespace : conflictualité et coopération entre les acteurs</div>
-                    </div>
+                <div class="chapter-list">
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HGGSP', chapitre='De nouveaux espaces de conquête')}">De nouveaux espaces de conquête</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HGGSP', chapitre='Faire la guerre, faire la paix')}">Faire la guerre, faire la paix</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HGGSP', chapitre='Histoire et mémoires')}">Histoire et mémoires</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HGGSP', chapitre='Identifier, protéger et valoriser le patrimoine')}">Identifier, protéger et valoriser le patrimoine</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HGGSP', chapitre='L’environnement, entre exploitation et protection')}">L’environnement, entre exploitation et protection</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HGGSP', chapitre='L’enjeu de la connaissance')}">L’enjeu de la connaissance</a>
                 </div>
             </details>
 
@@ -367,34 +309,19 @@
                     <strong>Ouvrir</strong>
                 </summary>
 
-                <div class="chapter-group">
-                    <h3>Économie</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Quels sont les sources et les défis de la croissance économique ?</div>
-                        <div class="chapter-item">Quels sont les fondements du commerce international ?</div>
-                        <div class="chapter-item">Comment lutter contre le chômage ?</div>
-                        <div class="chapter-item">Comment expliquer les crises financières et réguler le système financier ?</div>
-                        <div class="chapter-item">Quelles politiques économiques dans le cadre européen ?</div>
-                    </div>
-                </div>
-
-                <div class="chapter-group">
-                    <h3>Sociologie et science politique</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Comment est structurée la société française actuelle ?</div>
-                        <div class="chapter-item">Quelle est l’action de l’école sur les destins individuels ?</div>
-                        <div class="chapter-item">Quels sont les caractéristiques et facteurs de la mobilité sociale ?</div>
-                        <div class="chapter-item">Quelles mutations du travail et de l’emploi ?</div>
-                        <div class="chapter-item">Comment expliquer l’engagement politique ?</div>
-                    </div>
-                </div>
-
-                <div class="chapter-group">
-                    <h3>Regards croisés</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Quelles inégalités sont compatibles avec les conceptions de la justice sociale ?</div>
-                        <div class="chapter-item">Quelle action publique pour l’environnement ?</div>
-                    </div>
+                <div class="chapter-list">
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Quels sont les sources et les défis de la croissance économique ?')}">Quels sont les sources et les défis de la croissance économique ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Quels sont les fondements du commerce international ?')}">Quels sont les fondements du commerce international ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Comment lutter contre le chômage ?')}">Comment lutter contre le chômage ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Comment expliquer les crises financières et réguler le système financier ?')}">Comment expliquer les crises financières et réguler le système financier ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Quelles politiques économiques dans le cadre européen ?')}">Quelles politiques économiques dans le cadre européen ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Comment est structurée la société française actuelle ?')}">Comment est structurée la société française actuelle ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Quelle est l’action de l’école sur les destins individuels ?')}">Quelle est l’action de l’école sur les destins individuels ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Quels sont les caractéristiques et facteurs de la mobilité sociale ?')}">Quels sont les caractéristiques et facteurs de la mobilité sociale ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Quelles mutations du travail et de l’emploi ?')}">Quelles mutations du travail et de l’emploi ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Comment expliquer l’engagement politique ?')}">Comment expliquer l’engagement politique ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Quelles inégalités sont compatibles avec les conceptions de la justice sociale ?')}">Quelles inégalités sont compatibles avec les conceptions de la justice sociale ?</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='SES', chapitre='Quelle action publique pour l’environnement ?')}">Quelle action publique pour l’environnement ?</a>
                 </div>
             </details>
 
@@ -408,22 +335,13 @@
                     <strong>Ouvrir</strong>
                 </summary>
 
-                <div class="chapter-group">
-                    <h3>La recherche de soi</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Éducation, transmission et émancipation</div>
-                        <div class="chapter-item">Les expressions de la sensibilité</div>
-                        <div class="chapter-item">Les métamorphoses du moi</div>
-                    </div>
-                </div>
-
-                <div class="chapter-group">
-                    <h3>L’humanité en question</h3>
-                    <div class="chapter-list">
-                        <div class="chapter-item">Création, continuités et ruptures</div>
-                        <div class="chapter-item">Histoire et violence</div>
-                        <div class="chapter-item">L’humain et ses limites</div>
-                    </div>
+                <div class="chapter-list">
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HLP', chapitre='Éducation, transmission et émancipation')}">Éducation, transmission et émancipation</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HLP', chapitre='Les expressions de la sensibilité')}">Les expressions de la sensibilité</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HLP', chapitre='Les métamorphoses du moi')}">Les métamorphoses du moi</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HLP', chapitre='Création, continuités et ruptures')}">Création, continuités et ruptures</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HLP', chapitre='Histoire et violence')}">Histoire et violence</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='HLP', chapitre='L’humain et ses limites')}">L’humain et ses limites</a>
                 </div>
             </details>
 
@@ -438,12 +356,12 @@
                 </summary>
 
                 <div class="chapter-list">
-                    <div class="chapter-item">Arts et débats d’idées</div>
-                    <div class="chapter-item">Expression et construction de soi</div>
-                    <div class="chapter-item">Voyages, territoires, frontières</div>
-                    <div class="chapter-item">Étude d’œuvres littéraires</div>
-                    <div class="chapter-item">Analyse de documents culturels</div>
-                    <div class="chapter-item">Méthode de l’épreuve écrite et orale</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='LLCE', chapitre='Arts et débats d’idées')}">Arts et débats d’idées</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='LLCE', chapitre='Expression et construction de soi')}">Expression et construction de soi</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='LLCE', chapitre='Voyages, territoires, frontières')}">Voyages, territoires, frontières</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='LLCE', chapitre='Étude d’œuvres littéraires')}">Étude d’œuvres littéraires</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='LLCE', chapitre='Analyse de documents culturels')}">Analyse de documents culturels</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='LLCE', chapitre='Méthode de l’épreuve écrite et orale')}">Méthode de l’épreuve écrite et orale</a>
                 </div>
             </details>
 
@@ -458,32 +376,12 @@
                 </summary>
 
                 <div class="chapter-list">
-                    <div class="chapter-item">Savoirs, création et innovation</div>
-                    <div class="chapter-item">Représentations</div>
-                    <div class="chapter-item">Faire société</div>
-                    <div class="chapter-item">Environnements en mutation</div>
-                    <div class="chapter-item">Relation au monde</div>
-                    <div class="chapter-item">Analyse de l’actualité anglophone</div>
-                </div>
-            </details>
-
-            <details class="cours-accordion-card">
-                <summary>
-                    <div>
-                        <span class="subject-badge">Spécialité</span>
-                        <h2>🏛 LLCA</h2>
-                        <p>Littérature, langues et cultures de l’Antiquité.</p>
-                    </div>
-                    <strong>Ouvrir</strong>
-                </summary>
-
-                <div class="chapter-list">
-                    <div class="chapter-item">La cité entre réalités et utopies</div>
-                    <div class="chapter-item">Justice des dieux, justice des hommes</div>
-                    <div class="chapter-item">Amour, amours</div>
-                    <div class="chapter-item">Méditerranée : conflits, influences et échanges</div>
-                    <div class="chapter-item">Textes latins et grecs</div>
-                    <div class="chapter-item">Héritages antiques dans le monde moderne</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='AMC', chapitre='Savoirs, création et innovation')}">Savoirs, création et innovation</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='AMC', chapitre='Représentations')}">Représentations</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='AMC', chapitre='Faire société')}">Faire société</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='AMC', chapitre='Environnements en mutation')}">Environnements en mutation</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='AMC', chapitre='Relation au monde')}">Relation au monde</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='AMC', chapitre='Analyse de l’actualité anglophone')}">Analyse de l’actualité anglophone</a>
                 </div>
             </details>
 
@@ -511,12 +409,12 @@
                 </summary>
 
                 <div class="chapter-list">
-                    <div class="chapter-item">Pratique plastique et démarche artistique</div>
-                    <div class="chapter-item">Œuvre, espace, auteur et spectateur</div>
-                    <div class="chapter-item">Images, représentation et création</div>
-                    <div class="chapter-item">Exposition et présentation de l’œuvre</div>
-                    <div class="chapter-item">Analyse d’œuvres et culture artistique</div>
-                    <div class="chapter-item">Préparation du dossier artistique</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Arts plastiques', chapitre='Pratique plastique et démarche artistique')}">Pratique plastique et démarche artistique</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Arts plastiques', chapitre='Œuvre, espace, auteur et spectateur')}">Œuvre, espace, auteur et spectateur</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Arts plastiques', chapitre='Images, représentation et création')}">Images, représentation et création</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Arts plastiques', chapitre='Exposition et présentation de l’œuvre')}">Exposition et présentation de l’œuvre</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Arts plastiques', chapitre='Analyse d’œuvres et culture artistique')}">Analyse d’œuvres et culture artistique</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Arts plastiques', chapitre='Préparation du dossier artistique')}">Préparation du dossier artistique</a>
                 </div>
             </details>
 
@@ -531,13 +429,13 @@
                 </summary>
 
                 <div class="chapter-list">
-                    <div class="chapter-item">Écriture audiovisuelle</div>
-                    <div class="chapter-item">Mise en scène et cadrage</div>
-                    <div class="chapter-item">Montage et narration</div>
-                    <div class="chapter-item">Son, image et rythme</div>
-                    <div class="chapter-item">Histoire du cinéma</div>
-                    <div class="chapter-item">Analyse filmique</div>
-                    <div class="chapter-item">Projet de création audiovisuelle</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Cinéma-audiovisuel', chapitre='Écriture audiovisuelle')}">Écriture audiovisuelle</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Cinéma-audiovisuel', chapitre='Mise en scène et cadrage')}">Mise en scène et cadrage</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Cinéma-audiovisuel', chapitre='Montage et narration')}">Montage et narration</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Cinéma-audiovisuel', chapitre='Son, image et rythme')}">Son, image et rythme</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Cinéma-audiovisuel', chapitre='Histoire du cinéma')}">Histoire du cinéma</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Cinéma-audiovisuel', chapitre='Analyse filmique')}">Analyse filmique</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='Cinéma-audiovisuel', chapitre='Projet de création audiovisuelle')}">Projet de création audiovisuelle</a>
                 </div>
             </details>
 
@@ -545,107 +443,6 @@
                 <summary>
                     <div>
                         <span class="subject-badge">Arts</span>
-                        <h2>💃 Danse</h2>
-                        <p>Culture chorégraphique, corps et création.</p>
-                    </div>
-                    <strong>Ouvrir</strong>
-                </summary>
-
-                <div class="chapter-list">
-                    <div class="chapter-item">Corps, mouvement et espace</div>
-                    <div class="chapter-item">Composition chorégraphique</div>
-                    <div class="chapter-item">Interprétation et présence scénique</div>
-                    <div class="chapter-item">Culture chorégraphique</div>
-                    <div class="chapter-item">Analyse d’œuvres dansées</div>
-                    <div class="chapter-item">Projet de création</div>
-                </div>
-            </details>
-
-            <details class="cours-accordion-card">
-                <summary>
-                    <div>
-                        <span class="subject-badge">Arts</span>
-                        <h2>🏺 Histoire des arts</h2>
-                        <p>Œuvres, patrimoine, styles et contextes historiques.</p>
-                    </div>
-                    <strong>Ouvrir</strong>
-                </summary>
-
-                <div class="chapter-list">
-                    <div class="chapter-item">Analyser une œuvre d’art</div>
-                    <div class="chapter-item">Patrimoine et mémoire</div>
-                    <div class="chapter-item">Art, pouvoir et société</div>
-                    <div class="chapter-item">Modernité et ruptures artistiques</div>
-                    <div class="chapter-item">Musées, expositions et médiation</div>
-                    <div class="chapter-item">Étude de foyers artistiques</div>
-                </div>
-            </details>
-
-            <details class="cours-accordion-card">
-                <summary>
-                    <div>
-                        <span class="subject-badge">Arts</span>
-                        <h2>🎵 Musique</h2>
-                        <p>Pratique musicale, écoute, analyse et création.</p>
-                    </div>
-                    <strong>Ouvrir</strong>
-                </summary>
-
-                <div class="chapter-list">
-                    <div class="chapter-item">Écoute et analyse musicale</div>
-                    <div class="chapter-item">Interprétation et pratique collective</div>
-                    <div class="chapter-item">Création et arrangement</div>
-                    <div class="chapter-item">Musique, société et culture</div>
-                    <div class="chapter-item">Technologies du son</div>
-                    <div class="chapter-item">Projet musical</div>
-                </div>
-            </details>
-
-            <details class="cours-accordion-card">
-                <summary>
-                    <div>
-                        <span class="subject-badge">Arts</span>
-                        <h2>🎭 Théâtre</h2>
-                        <p>Jeu, mise en scène, texte et spectacle vivant.</p>
-                    </div>
-                    <strong>Ouvrir</strong>
-                </summary>
-
-                <div class="chapter-list">
-                    <div class="chapter-item">Jeu de l’acteur</div>
-                    <div class="chapter-item">Texte théâtral et dramaturgie</div>
-                    <div class="chapter-item">Mise en scène</div>
-                    <div class="chapter-item">Scénographie, corps et espace</div>
-                    <div class="chapter-item">Histoire du théâtre</div>
-                    <div class="chapter-item">Analyse de spectacle</div>
-                    <div class="chapter-item">Projet de création théâtrale</div>
-                </div>
-            </details>
-
-            <details class="cours-accordion-card">
-                <summary>
-                    <div>
-                        <span class="subject-badge">Arts</span>
-                        <h2>🎪 Arts du cirque</h2>
-                        <p>Corps, espace, performance et création circassienne.</p>
-                    </div>
-                    <strong>Ouvrir</strong>
-                </summary>
-
-                <div class="chapter-list">
-                    <div class="chapter-item">Pratiques circassiennes</div>
-                    <div class="chapter-item">Équilibre, acrobatie et manipulation</div>
-                    <div class="chapter-item">Corps, risque et maîtrise</div>
-                    <div class="chapter-item">Écriture scénique</div>
-                    <div class="chapter-item">Culture du cirque</div>
-                    <div class="chapter-item">Projet de création</div>
-                </div>
-            </details>
-
-            <details class="cours-accordion-card">
-                <summary>
-                    <div>
-                        <span class="subject-badge">Sport</span>
                         <h2>🏆 EPPCS</h2>
                         <p>Éducation physique, pratiques et culture sportives.</p>
                     </div>
@@ -653,12 +450,12 @@
                 </summary>
 
                 <div class="chapter-list">
-                    <div class="chapter-item">Pratique physique et performance</div>
-                    <div class="chapter-item">Entraînement, effort et progression</div>
-                    <div class="chapter-item">Corps, santé et sécurité</div>
-                    <div class="chapter-item">Sport, société et culture</div>
-                    <div class="chapter-item">Organisation d’un projet sportif</div>
-                    <div class="chapter-item">Analyse de la pratique</div>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPPCS', chapitre='Pratique physique et performance')}">Pratique physique et performance</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPPCS', chapitre='Entraînement, effort et progression')}">Entraînement, effort et progression</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPPCS', chapitre='Corps, santé et sécurité')}">Corps, santé et sécurité</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPPCS', chapitre='Sport, société et culture')}">Sport, société et culture</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPPCS', chapitre='Organisation d’un projet sportif')}">Organisation d’un projet sportif</a>
+                    <a class="chapter-item" th:href="@{/cours/chapitre(matiere='EPPCS', chapitre='Analyse de la pratique')}">Analyse de la pratique</a>
                 </div>
             </details>
 

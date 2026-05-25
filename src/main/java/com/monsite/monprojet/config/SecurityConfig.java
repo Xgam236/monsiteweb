@@ -94,6 +94,7 @@ public class SecurityConfig {
                                 "/fiche.css",
                                 "/planning.css",
                                 "/cours.css",
+                                "/cours-chapitre.css",
                                 "/adminpage.css",
 
                                 "/css/**",
