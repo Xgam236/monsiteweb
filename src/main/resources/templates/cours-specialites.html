@@ -55,10 +55,9 @@
 
         <div>
             <p class="welcome-small">Terminale générale</p>
-            <h1>Enseignements de spécialité</h1>
+            <h1>Spécialités</h1>
             <p>
-                En Terminale générale, l’élève suit normalement deux spécialités
-                parmi celles choisies en Première.
+                Clique sur une spécialité pour afficher ses grands chapitres de Terminale.
             </p>
         </div>
 
@@ -68,73 +67,223 @@
 
         <div class="speciality-category-header">
             <h2>Sciences, numérique et ingénierie</h2>
-            <p>
-                Spécialités orientées vers les sciences, les mathématiques,
-                le numérique, les technologies et la démarche expérimentale.
-            </p>
+            <p>Mathématiques, sciences expérimentales, informatique et ingénierie.</p>
         </div>
 
-        <div class="cours-list-grid">
+        <div class="cours-accordion-grid">
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>➗ Mathématiques</h2>
-                <p>
-                    Fonctions, suites, probabilités, géométrie, algèbre,
-                    raisonnement, démonstrations et résolution de problèmes.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>➗ Mathématiques</h2>
+                        <p>Algèbre, analyse, géométrie, probabilités et raisonnement.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>⚗️ Physique-chimie</h2>
-                <p>
-                    Mécanique, ondes, énergie, transformations chimiques,
-                    mesures, modélisation et démarche scientifique.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>Algèbre et géométrie</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Combinatoire et dénombrement</div>
+                        <div class="chapter-item">Vecteurs, droites et plans de l’espace</div>
+                        <div class="chapter-item">Orthogonalité et distances dans l’espace</div>
+                        <div class="chapter-item">Équations de droites et de plans</div>
+                    </div>
+                </div>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>🧬 SVT</h2>
-                <p>
-                    Sciences de la vie, Terre, génétique, évolution,
-                    environnement, santé et mécanismes biologiques.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>Analyse</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Suites numériques</div>
+                        <div class="chapter-item">Limites de suites</div>
+                        <div class="chapter-item">Limites de fonctions</div>
+                        <div class="chapter-item">Continuité</div>
+                        <div class="chapter-item">Dérivation et convexité</div>
+                        <div class="chapter-item">Fonction logarithme népérien</div>
+                        <div class="chapter-item">Fonction exponentielle</div>
+                        <div class="chapter-item">Primitives</div>
+                        <div class="chapter-item">Équations différentielles</div>
+                        <div class="chapter-item">Calcul intégral</div>
+                    </div>
+                </div>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>💻 NSI</h2>
-                <p>
-                    Numérique et sciences informatiques : programmation,
-                    algorithmes, données, réseaux, architecture et logique.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>Probabilités</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Variables aléatoires</div>
+                        <div class="chapter-item">Loi binomiale</div>
+                        <div class="chapter-item">Sommes de variables aléatoires</div>
+                        <div class="chapter-item">Concentration, loi des grands nombres</div>
+                    </div>
+                </div>
+            </details>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>🛠 Sciences de l’ingénieur</h2>
-                <p>
-                    Systèmes, innovation, modélisation, mécanique,
-                    énergie, objets techniques et conception.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>⚗️ Physique-chimie</h2>
+                        <p>Matière, mouvement, énergie, ondes et signaux.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>🌱 Biologie-écologie</h2>
-                <p>
-                    Biologie, environnement, écologie et systèmes vivants,
-                    proposée selon les établissements.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>Constitution et transformations de la matière</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Transformations acide-base</div>
+                        <div class="chapter-item">Méthodes physiques d’analyse</div>
+                        <div class="chapter-item">Cinétique chimique</div>
+                        <div class="chapter-item">Équilibres chimiques</div>
+                        <div class="chapter-item">Stratégie de synthèse organique</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>Mouvement et interactions</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Cinématique du point</div>
+                        <div class="chapter-item">Lois de Newton</div>
+                        <div class="chapter-item">Mouvement dans un champ uniforme</div>
+                        <div class="chapter-item">Mouvement des satellites et planètes</div>
+                        <div class="chapter-item">Fluides et pression</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>Énergie : conversions et transferts</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Travail d’une force</div>
+                        <div class="chapter-item">Énergie mécanique</div>
+                        <div class="chapter-item">Premier principe de la thermodynamique</div>
+                        <div class="chapter-item">Transferts thermiques</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>Ondes et signaux</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Lunette astronomique</div>
+                        <div class="chapter-item">Diffraction et interférences</div>
+                        <div class="chapter-item">Effet Doppler</div>
+                        <div class="chapter-item">Condensateur et circuits électriques</div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>🧬 SVT</h2>
+                        <p>Génétique, évolution, Terre, environnement et santé.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-group">
+                    <h3>La Terre, la vie et l’organisation du vivant</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Génétique et évolution</div>
+                        <div class="chapter-item">Origine du génotype des individus</div>
+                        <div class="chapter-item">Diversification du vivant</div>
+                        <div class="chapter-item">Temps et roches</div>
+                        <div class="chapter-item">Traces du passé mouvementé de la Terre</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>Enjeux contemporains de la planète</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Organisation fonctionnelle des plantes</div>
+                        <div class="chapter-item">Production de matière organique</div>
+                        <div class="chapter-item">Reproduction des plantes</div>
+                        <div class="chapter-item">Climats de la Terre</div>
+                        <div class="chapter-item">Impacts des activités humaines sur les écosystèmes</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>Corps humain et santé</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Comportements, mouvement et système nerveux</div>
+                        <div class="chapter-item">Réflexe myotatique</div>
+                        <div class="chapter-item">Cerveau, mouvement volontaire et plasticité</div>
+                        <div class="chapter-item">Stress aigu et stress chronique</div>
+                        <div class="chapter-item">Système immunitaire</div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>💻 NSI</h2>
+                        <p>Programmation, données, algorithmes, réseaux et machines.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Structures de données</div>
+                    <div class="chapter-item">Bases de données</div>
+                    <div class="chapter-item">Architectures matérielles et systèmes d’exploitation</div>
+                    <div class="chapter-item">Réseaux et protocoles de routage</div>
+                    <div class="chapter-item">Langages et programmation</div>
+                    <div class="chapter-item">Récursivité</div>
+                    <div class="chapter-item">Programmation orientée objet</div>
+                    <div class="chapter-item">Algorithmes sur les graphes</div>
+                    <div class="chapter-item">Diviser pour régner</div>
+                    <div class="chapter-item">Programmation dynamique</div>
+                    <div class="chapter-item">Recherche textuelle</div>
+                    <div class="chapter-item">Sécurisation des communications</div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>🛠 Sciences de l’ingénieur</h2>
+                        <p>Systèmes, innovation, modélisation et conception.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Analyser le besoin et le cahier des charges</div>
+                    <div class="chapter-item">Organisation fonctionnelle d’un système</div>
+                    <div class="chapter-item">Chaîne d’énergie et chaîne d’information</div>
+                    <div class="chapter-item">Modélisation des systèmes</div>
+                    <div class="chapter-item">Énergie, puissance et rendement</div>
+                    <div class="chapter-item">Mouvements, efforts et mécanique</div>
+                    <div class="chapter-item">Commande, capteurs et actionneurs</div>
+                    <div class="chapter-item">Simulation et validation</div>
+                    <div class="chapter-item">Innovation et projet d’ingénierie</div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>🌱 Biologie-écologie</h2>
+                        <p>Vivant, environnement, agriculture et écologie.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Organisation du vivant</div>
+                    <div class="chapter-item">Biodiversité et écosystèmes</div>
+                    <div class="chapter-item">Fonctionnement des agroécosystèmes</div>
+                    <div class="chapter-item">Écologie et environnement</div>
+                    <div class="chapter-item">Gestion des ressources naturelles</div>
+                    <div class="chapter-item">Santé, alimentation et développement durable</div>
+                </div>
+            </details>
 
         </div>
 
@@ -144,73 +293,199 @@
 
         <div class="speciality-category-header">
             <h2>Sciences humaines, lettres et société</h2>
-            <p>
-                Spécialités orientées vers les lettres, les langues,
-                la philosophie, l’histoire, la géopolitique et les sciences sociales.
-            </p>
+            <p>Lettres, philosophie, géopolitique, économie, langues et sciences sociales.</p>
         </div>
 
-        <div class="cours-list-grid">
+        <div class="cours-accordion-grid">
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>🌍 HGGSP</h2>
-                <p>
-                    Histoire-géographie, géopolitique et sciences politiques :
-                    puissances, conflits, frontières, mémoire et démocratie.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>🌍 HGGSP</h2>
+                        <p>Histoire-géographie, géopolitique et sciences politiques.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>📖 HLP</h2>
-                <p>
-                    Humanités, littérature et philosophie : textes,
-                    idées, culture, langage, humanité et argumentation.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>De nouveaux espaces de conquête</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Affirmations de puissance, rivalités et coopérations</div>
+                        <div class="chapter-item">La Chine : à la conquête de l’espace, des mers et des océans</div>
+                    </div>
+                </div>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>💶 SES</h2>
-                <p>
-                    Sciences économiques et sociales : économie,
-                    sociologie, science politique, marché, société et État.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>Faire la guerre, faire la paix</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Formes de conflits et modes de résolution</div>
+                        <div class="chapter-item">Le Moyen-Orient : conflits régionaux et tentatives de paix</div>
+                    </div>
+                </div>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>🇬🇧 LLCE</h2>
-                <p>
-                    Langues, littératures et cultures étrangères et régionales :
-                    œuvres, civilisation, expression et analyse.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>Histoire et mémoires</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Histoire et mémoire, histoire et justice</div>
+                        <div class="chapter-item">L’histoire et les mémoires du génocide des Juifs et des Tsiganes</div>
+                    </div>
+                </div>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>🌎 AMC</h2>
-                <p>
-                    Anglais monde contemporain : actualité, médias,
-                    enjeux internationaux, sociétés anglophones et analyse critique.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>Identifier, protéger et valoriser le patrimoine</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Usages sociaux et politiques du patrimoine</div>
+                        <div class="chapter-item">La France et le patrimoine</div>
+                    </div>
+                </div>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Spécialité</span>
-                <h2>🏛 LLCA</h2>
-                <p>
-                    Littérature, langues et cultures de l’Antiquité :
-                    latin, grec, textes anciens, mythes et héritages.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-group">
+                    <h3>L’environnement, entre exploitation et protection</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Exploiter, préserver et protéger</div>
+                        <div class="chapter-item">Le changement climatique : approches historiques et géopolitiques</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>L’enjeu de la connaissance</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Produire et diffuser des connaissances</div>
+                        <div class="chapter-item">Le cyberespace : conflictualité et coopération entre les acteurs</div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>💶 SES</h2>
+                        <p>Économie, sociologie et science politique.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-group">
+                    <h3>Économie</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Quels sont les sources et les défis de la croissance économique ?</div>
+                        <div class="chapter-item">Quels sont les fondements du commerce international ?</div>
+                        <div class="chapter-item">Comment lutter contre le chômage ?</div>
+                        <div class="chapter-item">Comment expliquer les crises financières et réguler le système financier ?</div>
+                        <div class="chapter-item">Quelles politiques économiques dans le cadre européen ?</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>Sociologie et science politique</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Comment est structurée la société française actuelle ?</div>
+                        <div class="chapter-item">Quelle est l’action de l’école sur les destins individuels ?</div>
+                        <div class="chapter-item">Quels sont les caractéristiques et facteurs de la mobilité sociale ?</div>
+                        <div class="chapter-item">Quelles mutations du travail et de l’emploi ?</div>
+                        <div class="chapter-item">Comment expliquer l’engagement politique ?</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>Regards croisés</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Quelles inégalités sont compatibles avec les conceptions de la justice sociale ?</div>
+                        <div class="chapter-item">Quelle action publique pour l’environnement ?</div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>📖 HLP</h2>
+                        <p>Humanités, littérature et philosophie.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-group">
+                    <h3>La recherche de soi</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Éducation, transmission et émancipation</div>
+                        <div class="chapter-item">Les expressions de la sensibilité</div>
+                        <div class="chapter-item">Les métamorphoses du moi</div>
+                    </div>
+                </div>
+
+                <div class="chapter-group">
+                    <h3>L’humanité en question</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">Création, continuités et ruptures</div>
+                        <div class="chapter-item">Histoire et violence</div>
+                        <div class="chapter-item">L’humain et ses limites</div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>🇬🇧 LLCE</h2>
+                        <p>Langues, littératures et cultures étrangères.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Arts et débats d’idées</div>
+                    <div class="chapter-item">Expression et construction de soi</div>
+                    <div class="chapter-item">Voyages, territoires, frontières</div>
+                    <div class="chapter-item">Étude d’œuvres littéraires</div>
+                    <div class="chapter-item">Analyse de documents culturels</div>
+                    <div class="chapter-item">Méthode de l’épreuve écrite et orale</div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>🌎 AMC</h2>
+                        <p>Anglais monde contemporain.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Savoirs, création et innovation</div>
+                    <div class="chapter-item">Représentations</div>
+                    <div class="chapter-item">Faire société</div>
+                    <div class="chapter-item">Environnements en mutation</div>
+                    <div class="chapter-item">Relation au monde</div>
+                    <div class="chapter-item">Analyse de l’actualité anglophone</div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Spécialité</span>
+                        <h2>🏛 LLCA</h2>
+                        <p>Littérature, langues et cultures de l’Antiquité.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">La cité entre réalités et utopies</div>
+                    <div class="chapter-item">Justice des dieux, justice des hommes</div>
+                    <div class="chapter-item">Amour, amours</div>
+                    <div class="chapter-item">Méditerranée : conflits, influences et échanges</div>
+                    <div class="chapter-item">Textes latins et grecs</div>
+                    <div class="chapter-item">Héritages antiques dans le monde moderne</div>
+                </div>
+            </details>
 
         </div>
 
@@ -220,93 +495,172 @@
 
         <div class="speciality-category-header">
             <h2>Arts et sport</h2>
-            <p>
-                Spécialités artistiques, culturelles et sportives proposées
-                selon les établissements.
-            </p>
+            <p>Spécialités artistiques, culturelles et sportives proposées selon les établissements.</p>
         </div>
 
-        <div class="cours-list-grid">
+        <div class="cours-accordion-grid">
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Arts</span>
-                <h2>🎨 Arts plastiques</h2>
-                <p>
-                    Création, analyse d’œuvres, pratique artistique,
-                    histoire des arts et démarche personnelle.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Arts</span>
+                        <h2>🎨 Arts plastiques</h2>
+                        <p>Création, analyse d’œuvres et pratique artistique.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Arts</span>
-                <h2>🎬 Cinéma-audiovisuel</h2>
-                <p>
-                    Analyse filmique, création audiovisuelle,
-                    mise en scène, écriture visuelle et culture du cinéma.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-list">
+                    <div class="chapter-item">Pratique plastique et démarche artistique</div>
+                    <div class="chapter-item">Œuvre, espace, auteur et spectateur</div>
+                    <div class="chapter-item">Images, représentation et création</div>
+                    <div class="chapter-item">Exposition et présentation de l’œuvre</div>
+                    <div class="chapter-item">Analyse d’œuvres et culture artistique</div>
+                    <div class="chapter-item">Préparation du dossier artistique</div>
+                </div>
+            </details>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Arts</span>
-                <h2>💃 Danse</h2>
-                <p>
-                    Culture chorégraphique, pratique corporelle,
-                    composition, mouvement et interprétation.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Arts</span>
+                        <h2>🎬 Cinéma-audiovisuel</h2>
+                        <p>Analyse filmique, écriture, tournage et montage.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Arts</span>
-                <h2>🏺 Histoire des arts</h2>
-                <p>
-                    Œuvres, patrimoine, analyse artistique,
-                    périodes, styles et contexte historique.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-list">
+                    <div class="chapter-item">Écriture audiovisuelle</div>
+                    <div class="chapter-item">Mise en scène et cadrage</div>
+                    <div class="chapter-item">Montage et narration</div>
+                    <div class="chapter-item">Son, image et rythme</div>
+                    <div class="chapter-item">Histoire du cinéma</div>
+                    <div class="chapter-item">Analyse filmique</div>
+                    <div class="chapter-item">Projet de création audiovisuelle</div>
+                </div>
+            </details>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Arts</span>
-                <h2>🎵 Musique</h2>
-                <p>
-                    Pratique musicale, écoute, analyse,
-                    création, culture musicale et interprétation.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Arts</span>
+                        <h2>💃 Danse</h2>
+                        <p>Culture chorégraphique, corps et création.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Arts</span>
-                <h2>🎭 Théâtre</h2>
-                <p>
-                    Jeu, mise en scène, texte théâtral,
-                    spectacle vivant et culture dramatique.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-list">
+                    <div class="chapter-item">Corps, mouvement et espace</div>
+                    <div class="chapter-item">Composition chorégraphique</div>
+                    <div class="chapter-item">Interprétation et présence scénique</div>
+                    <div class="chapter-item">Culture chorégraphique</div>
+                    <div class="chapter-item">Analyse d’œuvres dansées</div>
+                    <div class="chapter-item">Projet de création</div>
+                </div>
+            </details>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Arts</span>
-                <h2>🎪 Arts du cirque</h2>
-                <p>
-                    Pratique circassienne, création,
-                    corps, espace, performance et culture du cirque.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Arts</span>
+                        <h2>🏺 Histoire des arts</h2>
+                        <p>Œuvres, patrimoine, styles et contextes historiques.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
 
-            <div class="cours-subject-card">
-                <span class="subject-badge">Sport</span>
-                <h2>🏆 EPPCS</h2>
-                <p>
-                    Éducation physique, pratiques et culture sportives :
-                    entraînement, performance, santé et société.
-                </p>
-                <button type="button">Bientôt : ouvrir</button>
-            </div>
+                <div class="chapter-list">
+                    <div class="chapter-item">Analyser une œuvre d’art</div>
+                    <div class="chapter-item">Patrimoine et mémoire</div>
+                    <div class="chapter-item">Art, pouvoir et société</div>
+                    <div class="chapter-item">Modernité et ruptures artistiques</div>
+                    <div class="chapter-item">Musées, expositions et médiation</div>
+                    <div class="chapter-item">Étude de foyers artistiques</div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Arts</span>
+                        <h2>🎵 Musique</h2>
+                        <p>Pratique musicale, écoute, analyse et création.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Écoute et analyse musicale</div>
+                    <div class="chapter-item">Interprétation et pratique collective</div>
+                    <div class="chapter-item">Création et arrangement</div>
+                    <div class="chapter-item">Musique, société et culture</div>
+                    <div class="chapter-item">Technologies du son</div>
+                    <div class="chapter-item">Projet musical</div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Arts</span>
+                        <h2>🎭 Théâtre</h2>
+                        <p>Jeu, mise en scène, texte et spectacle vivant.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Jeu de l’acteur</div>
+                    <div class="chapter-item">Texte théâtral et dramaturgie</div>
+                    <div class="chapter-item">Mise en scène</div>
+                    <div class="chapter-item">Scénographie, corps et espace</div>
+                    <div class="chapter-item">Histoire du théâtre</div>
+                    <div class="chapter-item">Analyse de spectacle</div>
+                    <div class="chapter-item">Projet de création théâtrale</div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Arts</span>
+                        <h2>🎪 Arts du cirque</h2>
+                        <p>Corps, espace, performance et création circassienne.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Pratiques circassiennes</div>
+                    <div class="chapter-item">Équilibre, acrobatie et manipulation</div>
+                    <div class="chapter-item">Corps, risque et maîtrise</div>
+                    <div class="chapter-item">Écriture scénique</div>
+                    <div class="chapter-item">Culture du cirque</div>
+                    <div class="chapter-item">Projet de création</div>
+                </div>
+            </details>
+
+            <details class="cours-accordion-card">
+                <summary>
+                    <div>
+                        <span class="subject-badge">Sport</span>
+                        <h2>🏆 EPPCS</h2>
+                        <p>Éducation physique, pratiques et culture sportives.</p>
+                    </div>
+                    <strong>Ouvrir</strong>
+                </summary>
+
+                <div class="chapter-list">
+                    <div class="chapter-item">Pratique physique et performance</div>
+                    <div class="chapter-item">Entraînement, effort et progression</div>
+                    <div class="chapter-item">Corps, santé et sécurité</div>
+                    <div class="chapter-item">Sport, société et culture</div>
+                    <div class="chapter-item">Organisation d’un projet sportif</div>
+                    <div class="chapter-item">Analyse de la pratique</div>
+                </div>
+            </details>
 
         </div>
 
