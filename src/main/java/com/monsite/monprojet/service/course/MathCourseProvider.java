@@ -81,7 +81,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Quelle est l’erreur fréquente ?", "Inverser les bornes ou oublier de soustraire F(a)."),
                         new QuizQuestion("À quoi peut servir l’intégrale dans un problème concret ?", "À calculer une quantité totale accumulée.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Le calcul intégral sert à calculer une aire sous une courbe ou une quantité totale accumulée. Par exemple, si une fonction représente une vitesse, son intégrale peut donner une distance parcourue. Si elle représente un débit, l’intégrale peut donner un volume total."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On commence par repérer les bornes a et b, puis la fonction f. Ensuite, on cherche une primitive F de f et on applique la formule F(b) - F(a). La dernière étape est d’interpréter le résultat dans le contexte de l’exercice."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On utilise les intégrales dans les exercices d’aires, de valeur moyenne, de quantité accumulée, de physique, d’économie ou lorsqu’un graphique demande de calculer une surface sous une courbe."
+                        )
+                )
         );
     }
 
@@ -126,7 +140,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Comment dérive-t-on e^{u(x)} ?", "On utilise u'(x)e^{u(x)}."),
                         new QuizQuestion("Pourquoi l’exponentielle est-elle importante ?", "Elle modélise des phénomènes d’évolution rapide.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "La fonction exponentielle sert à modéliser des évolutions rapides : croissance d’une population, intérêts composés, refroidissement, décroissance radioactive ou évolution d’une quantité au cours du temps."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On l’utilise en reconnaissant les expressions avec e^x ou e^{u(x)}. Pour dériver e^{u(x)}, on multiplie par la dérivée de u. Pour résoudre une équation avec une inconnue en exposant, on utilise souvent le logarithme."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "Elle apparaît dans les études de fonctions, les équations différentielles, les modèles d’évolution et les problèmes avec taux de croissance ou de décroissance."
+                        )
+                )
         );
     }
 
@@ -171,7 +199,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Quelle est la dérivée de ln(x) ?", "C’est 1/x."),
                         new QuizQuestion("Quelle erreur faut-il éviter ?", "Utiliser ln sur un nombre négatif ou nul.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Le logarithme sert principalement à résoudre des équations où l’inconnue est dans un exposant. Il est aussi utilisé pour étudier certaines fonctions et simplifier des produits, quotients ou puissances."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "Avant d’utiliser ln, on vérifie toujours que l’expression est strictement positive. Ensuite, on applique les propriétés : ln(ab), ln(a/b), ln(a^n), ou la formule de dérivée."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On le retrouve dans les résolutions d’équations exponentielles, les études de fonctions avec ln, les dérivées de ln(u) et les problèmes d’évolution."
+                        )
+                )
         );
     }
 
@@ -212,7 +254,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Comment étudier les variations d’une suite ?", "On peut étudier le signe de u_{n+1} - u_n."),
                         new QuizQuestion("Quelle différence entre explicite et récurrence ?", "Une formule explicite donne directement u_n, une récurrence utilise le terme précédent.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Les suites servent à modéliser des phénomènes qui évoluent étape par étape : une population chaque année, un capital chaque mois, une quantité produite ou un algorithme qui répète une action."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On commence par comprendre comment passer d’un terme au suivant. Si on ajoute toujours le même nombre, la suite est arithmétique. Si on multiplie toujours par le même nombre, elle est géométrique."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "Les suites apparaissent dans les problèmes d’évolution, d’algorithmes, de placements financiers, de populations et dans les questions de limite."
+                        )
+                )
         );
     }
 
@@ -253,7 +309,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Que devient q^n si -1 < q < 1 ?", "La suite tend vers 0."),
                         new QuizQuestion("Quelle erreur faut-il éviter ?", "Confondre les premiers termes avec le comportement à l’infini.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "La limite d’une suite sert à savoir ce que devient une évolution sur le long terme. On peut savoir si une quantité se stabilise, augmente sans limite ou diminue vers zéro."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On repère la forme de la suite, puis on utilise les limites connues. Pour une suite géométrique, tout dépend de la raison q. Pour les fractions, on regarde souvent les termes dominants."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise dans les problèmes de population, de suites géométriques, d’algorithmes, de placements financiers et pour interpréter une évolution à long terme."
+                        )
+                )
         );
     }
 
@@ -295,7 +365,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Quelle limite vaut lim 1/x en +∞ ?", "Elle vaut 0."),
                         new QuizQuestion("Quelle notion graphique est liée aux limites ?", "Les asymptotes.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Les limites de fonctions servent à comprendre le comportement d’une courbe quand x devient très grand, très petit, ou se rapproche d’une valeur interdite. Elles permettent aussi d’étudier les asymptotes."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On regarde vers quoi tend x, puis on simplifie l’expression si nécessaire. En cas de forme indéterminée, on factorise, on développe ou on utilise les termes dominants."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On les utilise dans les études de fonctions, les tableaux de variations, les asymptotes verticales ou horizontales et l’analyse graphique."
+                        )
+                )
         );
     }
 
@@ -335,7 +419,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Quand la solution est-elle unique ?", "Quand la fonction est continue et strictement monotone."),
                         new QuizQuestion("Quelle condition ne faut-il pas oublier ?", "La continuité sur l’intervalle étudié.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "La continuité sert surtout à prouver qu’une équation a une solution, même quand on ne sait pas la trouver directement. Elle permet de dire qu’une courbe passe forcément par certaines valeurs."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On vérifie que la fonction est continue sur un intervalle, puis on regarde les valeurs aux bornes. Si la valeur cherchée est entre les deux, le théorème des valeurs intermédiaires garantit une solution."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise dans les questions d’existence de solution, les équations du type f(x)=k, les tableaux de variations et les preuves d’unicité."
+                        )
+                )
         );
     }
 
@@ -377,7 +475,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Que signifie f''(x) > 0 ?", "La fonction est convexe."),
                         new QuizQuestion("Qu’est-ce qu’un point d’inflexion ?", "Un point où la convexité change.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "La dérivation sert à comprendre comment une fonction évolue : elle augmente, diminue, atteint un maximum ou un minimum. La convexité sert à comprendre la forme de la courbe."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On calcule d’abord la dérivée f'(x), puis on étudie son signe pour obtenir les variations. Pour la convexité, on calcule f''(x) et on regarde si elle est positive ou négative."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise dans les études de fonctions, les tableaux de variations, les tangentes, les maximums/minimums et les questions sur la convexité ou les points d’inflexion."
+                        )
+                )
         );
     }
 
@@ -418,7 +530,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Comment vérifier une primitive ?", "On la dérive."),
                         new QuizQuestion("Pourquoi les primitives sont-elles utiles ?", "Pour calculer des intégrales.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Les primitives servent à faire l’opération inverse de la dérivation. Elles sont surtout utiles pour calculer des intégrales et résoudre certaines équations différentielles."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On cherche une fonction F qui, une fois dérivée, redonne la fonction f. Pour vérifier, il suffit de dériver la primitive proposée."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On les utilise dans les calculs d’intégrales, les tableaux de primitives, les problèmes d’aire et les équations différentielles."
+                        )
+                )
         );
     }
 
@@ -458,7 +584,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("À quoi sert une condition initiale ?", "À déterminer la constante C."),
                         new QuizQuestion("Pourquoi utilise-t-on ces équations ?", "Pour modéliser des phénomènes d’évolution.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Les équations différentielles servent à modéliser une quantité qui évolue selon sa propre variation : population, température, radioactivité, vitesse ou croissance."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On reconnaît le type d’équation, par exemple y'=ay. Ensuite, on écrit la forme générale de la solution, puis on utilise une condition initiale pour trouver la constante."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On les retrouve dans les problèmes de modélisation, de croissance exponentielle, de décroissance, de refroidissement ou d’évolution d’une grandeur."
+                        )
+                )
         );
     }
 
@@ -499,7 +639,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Que mesure la variance ?", "La dispersion autour de l’espérance."),
                         new QuizQuestion("Quelle condition vérifient les probabilités ?", "Leur somme vaut 1.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Les variables aléatoires servent à transformer une situation de hasard en valeurs numériques. Elles permettent par exemple de calculer un gain moyen, une perte moyenne ou un résultat attendu."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On liste les valeurs possibles de la variable, puis on associe une probabilité à chaque valeur. Ensuite, on peut calculer l’espérance, la variance ou l’écart-type."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On les utilise dans les jeux de hasard, les gains, les probabilités, les expériences aléatoires et les situations où un résultat numérique dépend du hasard."
+                        )
+                )
         );
     }
 
@@ -541,7 +695,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Quelle est l’espérance ?", "E(X)=np."),
                         new QuizQuestion("Quelle condition est essentielle ?", "Les répétitions doivent être indépendantes.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "La loi binomiale sert à calculer la probabilité d’obtenir un certain nombre de succès après plusieurs répétitions d’une même expérience."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On identifie le succès, le nombre de répétitions n et la probabilité p. Si les répétitions sont indépendantes, on peut utiliser la formule de la loi binomiale ou la calculatrice."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On la retrouve dans les tirages, les sondages, les tests, les expériences répétées et les problèmes où l’on compte un nombre de réussites."
+                        )
+                )
         );
     }
 
@@ -581,7 +749,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Pourquoi ce chapitre est important ?", "Il permet d’étudier des répétitions d’expériences."),
                         new QuizQuestion("Quelle propriété est essentielle ?", "La linéarité de l’espérance.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Les sommes de variables aléatoires servent à étudier un résultat total obtenu en additionnant plusieurs résultats aléatoires, comme plusieurs gains ou plusieurs répétitions d’une expérience."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On calcule les espérances séparément puis on les additionne. Pour les variances, il faut vérifier l’indépendance avant de les additionner."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise dans les répétitions d’expériences, les gains cumulés, les sommes de résultats aléatoires et les situations qui préparent à la loi des grands nombres."
+                        )
+                )
         );
     }
 
@@ -622,7 +804,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Pourquoi ce chapitre est utile ?", "Il justifie les estimations sur grands échantillons."),
                         new QuizQuestion("Quelle est l’idée principale ?", "Plus on répète, plus la moyenne est stable.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "La loi des grands nombres sert à comprendre pourquoi les statistiques deviennent plus fiables quand on augmente le nombre d’expériences ou la taille d’un échantillon."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On étudie une moyenne de résultats aléatoires. Plus le nombre de répétitions augmente, plus cette moyenne se rapproche de l’espérance."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise dans les sondages, les simulations, les expériences répétées et les problèmes où l’on veut justifier qu’une moyenne observée devient stable."
+                        )
+                )
         );
     }
 
@@ -664,7 +860,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Quelle question faut-il se poser ?", "Est-ce que l’ordre compte ?"),
                         new QuizQuestion("Où utilise-t-on la combinatoire ?", "En probabilités, notamment avec la loi binomiale.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "La combinatoire sert à compter rapidement le nombre de possibilités sans tout lister à la main. C’est très utile pour calculer des probabilités."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "La première question est de savoir si l’ordre compte. Ensuite, on choisit la formule adaptée : factorielle, coefficient binomial ou raisonnement par cas."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise dans les tirages, les choix de groupes, les arrangements, les probabilités et la loi binomiale."
+                        )
+                )
         );
     }
 
@@ -704,7 +914,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Comment tester la colinéarité ?", "On vérifie si un vecteur est un multiple de l’autre."),
                         new QuizQuestion("À quoi sert une représentation paramétrique ?", "À décrire tous les points d’une droite.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "La géométrie dans l’espace sert à étudier des objets en trois dimensions : droites, plans, points, parallélisme, alignement et intersections."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On utilise les coordonnées des points et des vecteurs. Une droite se décrit souvent avec un point et un vecteur directeur. Un plan peut se décrire avec un point et deux directions."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise pour tester l’alignement, montrer que deux droites sont parallèles, écrire une droite paramétrique ou étudier une position relative dans l’espace."
+                        )
+                )
         );
     }
 
@@ -745,7 +969,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("Comment calcule-t-on une distance entre deux points ?", "Avec la formule utilisant les différences de coordonnées."),
                         new QuizQuestion("Qu’est-ce qu’un vecteur normal ?", "Un vecteur perpendiculaire à un plan.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Ce chapitre sert à calculer des distances, montrer que deux directions sont perpendiculaires et comprendre les relations d’orthogonalité dans l’espace."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "On calcule le produit scalaire de deux vecteurs. S’il vaut zéro, les vecteurs sont orthogonaux. Pour les distances, on utilise la formule avec les coordonnées."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise pour prouver des angles droits, calculer des longueurs, trouver des distances entre points et travailler avec des plans perpendiculaires."
+                        )
+                )
         );
     }
 
@@ -786,7 +1024,21 @@ public class MathCourseProvider implements CourseProvider {
                         new QuizQuestion("À quoi sert un vecteur normal ?", "À écrire l’équation d’un plan."),
                         new QuizQuestion("Comment tester si un point appartient à un plan ?", "On remplace ses coordonnées dans l’équation.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "À quoi ça sert ?",
+                                "Les équations de droites et de plans servent à décrire précisément des objets de l’espace avec des coordonnées. Cela permet de calculer des intersections et de tester des appartenances."
+                        ),
+                        new ExplanationBlock(
+                                "Comment l’utiliser ?",
+                                "Pour une droite, on utilise un point et un vecteur directeur. Pour un plan, on utilise souvent un vecteur normal et une équation de la forme ax + by + cz + d = 0."
+                        ),
+                        new ExplanationBlock(
+                                "Dans quels exercices ?",
+                                "On l’utilise pour écrire une droite, écrire un plan, tester si un point appartient à un objet, chercher une intersection ou étudier des positions relatives."
+                        )
+                )
         );
     }
 
@@ -795,7 +1047,7 @@ public class MathCourseProvider implements CourseProvider {
                 matiere,
                 chapitre,
                 "Cours de mathématiques en préparation",
-                "Ce chapitre de mathématiques n’a pas encore été ajouté dans la version complète. Les autres chapitres principaux de Terminale sont déjà disponibles avec un vrai cours, des formules, une méthode, des vidéos et un quiz.",
+                "Ce chapitre de mathématiques n’a pas encore été ajouté dans la version complète.",
                 List.of(
                         "Chapitre non encore rédigé en version complète.",
                         "Le contenu sera ajouté dans une prochaine mise à jour.",
@@ -815,7 +1067,13 @@ public class MathCourseProvider implements CourseProvider {
                 List.of(
                         new QuizQuestion("Pourquoi ce chapitre n’est pas complet ?", "Parce qu’il n’a pas encore été rédigé dans le provider mathématiques.")
                 ),
-                "math"
+                "math",
+                List.of(
+                        new ExplanationBlock(
+                                "Cours en préparation",
+                                "Ce chapitre sera rédigé dans une prochaine mise à jour avec un vrai cours, une méthode, des exemples, des vidéos et un quiz."
+                        )
+                )
         );
     }
 }
