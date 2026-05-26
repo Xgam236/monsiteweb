@@ -21,79 +21,26 @@ public class MathCourseProvider implements CourseProvider {
     public CourseContent getCourse(String matiere, String chapitre) {
         String c = normalize(chapitre);
 
-        if (c.contains("calcul integral")) {
-            return calculIntegral(matiere, chapitre);
-        }
+        if (c.contains("calcul integral")) return calculIntegral(matiere, chapitre);
+        if (c.contains("fonction exponentielle")) return fonctionExponentielle(matiere, chapitre);
+        if (c.contains("fonction logarithme")) return fonctionLogarithme(matiere, chapitre);
+        if (c.contains("suites numeriques")) return suitesNumeriques(matiere, chapitre);
+        if (c.contains("limites de suites")) return limitesSuites(matiere, chapitre);
+        if (c.contains("limites de fonctions")) return limitesFonctions(matiere, chapitre);
+        if (c.contains("continuite")) return continuite(matiere, chapitre);
+        if (c.contains("derivation") || c.contains("convexite")) return derivationConvexite(matiere, chapitre);
+        if (c.contains("primitives")) return primitives(matiere, chapitre);
+        if (c.contains("equations differentielles")) return equationsDifferentielles(matiere, chapitre);
+        if (c.contains("variables aleatoires")) return variablesAleatoires(matiere, chapitre);
+        if (c.contains("loi binomiale")) return loiBinomiale(matiere, chapitre);
+        if (c.contains("sommes de variables")) return sommesVariablesAleatoires(matiere, chapitre);
+        if (c.contains("concentration") || c.contains("loi des grands nombres")) return concentrationLoiGrandsNombres(matiere, chapitre);
+        if (c.contains("combinatoire") || c.contains("denombrement")) return combinatoireDenombrement(matiere, chapitre);
+        if (c.contains("vecteurs") || c.contains("droites et plans de l espace")) return vecteursDroitesPlans(matiere, chapitre);
+        if (c.contains("orthogonalite") || c.contains("distances dans l espace")) return orthogonaliteDistances(matiere, chapitre);
+        if (c.contains("equations de droites") || c.contains("equations de plans")) return equationsDroitesPlans(matiere, chapitre);
 
-        if (c.contains("fonction exponentielle")) {
-            return exponentielle(matiere, chapitre);
-        }
-
-        if (c.contains("fonction logarithme")) {
-            return logarithme(matiere, chapitre);
-        }
-
-        if (c.contains("suites numeriques")) {
-            return suitesNumeriques(matiere, chapitre);
-        }
-
-        if (c.contains("limites de suites")) {
-            return limitesSuites(matiere, chapitre);
-        }
-
-        if (c.contains("limites de fonctions")) {
-            return limitesFonctions(matiere, chapitre);
-        }
-
-        if (c.contains("continuite")) {
-            return continuite(matiere, chapitre);
-        }
-
-        if (c.contains("derivation") || c.contains("convexite")) {
-            return derivationConvexite(matiere, chapitre);
-        }
-
-        if (c.contains("primitives")) {
-            return primitives(matiere, chapitre);
-        }
-
-        if (c.contains("equations differentielles")) {
-            return equationsDifferentielles(matiere, chapitre);
-        }
-
-        if (c.contains("variables aleatoires")) {
-            return variablesAleatoires(matiere, chapitre);
-        }
-
-        if (c.contains("loi binomiale")) {
-            return loiBinomiale(matiere, chapitre);
-        }
-
-        if (c.contains("sommes de variables")) {
-            return sommesVariables(matiere, chapitre);
-        }
-
-        if (c.contains("concentration") || c.contains("loi des grands nombres")) {
-            return concentration(matiere, chapitre);
-        }
-
-        if (c.contains("combinatoire") || c.contains("denombrement")) {
-            return combinatoire(matiere, chapitre);
-        }
-
-        if (c.contains("vecteurs") || c.contains("droites et plans")) {
-            return vecteursDroitesPlans(matiere, chapitre);
-        }
-
-        if (c.contains("orthogonalite") || c.contains("distances")) {
-            return orthogonaliteDistances(matiere, chapitre);
-        }
-
-        if (c.contains("equations de droites") || c.contains("equations de plans")) {
-            return equationsDroitesPlans(matiere, chapitre);
-        }
-
-        return mathsGeneral(matiere, chapitre);
+        return coursMathEnPreparation(matiere, chapitre);
     }
 
     private CourseContent calculIntegral(String matiere, String chapitre) {
@@ -101,72 +48,72 @@ public class MathCourseProvider implements CourseProvider {
                 matiere,
                 chapitre,
                 "Calcul intégral",
-                "Le calcul intégral permet de calculer une aire sous une courbe, une accumulation ou une quantité totale à partir d’une fonction. En Terminale, on relie surtout l’intégrale à la notion de primitive.",
+                "Le calcul intégral permet de mesurer une aire sous une courbe et de calculer une quantité accumulée. En Terminale, on utilise surtout le lien entre intégrale et primitive : si F est une primitive de f, alors l’intégrale de f entre a et b vaut F(b) - F(a).",
                 List.of(
-                        "L’intégrale de f entre a et b se note ∫ de a à b f(x) dx.",
-                        "Si f est positive, l’intégrale représente l’aire sous la courbe.",
-                        "Pour calculer une intégrale, on utilise une primitive F de f.",
-                        "L’intégrale peut représenter une aire, une distance, une quantité, une énergie ou une accumulation.",
-                        "Les propriétés de linéarité permettent de simplifier les calculs."
+                        "Une intégrale peut représenter une aire, une quantité totale ou une accumulation.",
+                        "Si f est positive sur [a ; b], l’intégrale correspond à l’aire sous la courbe.",
+                        "Le calcul d’une intégrale repose souvent sur la recherche d’une primitive.",
+                        "L’intégrale est linéaire : on peut séparer les sommes et sortir les constantes.",
+                        "L’unité d’une intégrale dépend du contexte : aire, distance, énergie, quantité, coût..."
                 ),
                 List.of(
                         "Identifier les bornes a et b.",
-                        "Identifier la fonction à intégrer.",
-                        "Trouver une primitive F de la fonction f.",
+                        "Identifier la fonction f à intégrer.",
+                        "Chercher une primitive F de f.",
                         "Calculer F(b) - F(a).",
-                        "Interpréter le résultat selon le contexte."
+                        "Interpréter le résultat selon la situation."
                 ),
                 List.of(
                         "\\[ \\int_a^b f(x)\\,dx = F(b)-F(a) \\]",
                         "\\[ \\int_a^b (f(x)+g(x))\\,dx = \\int_a^b f(x)\\,dx + \\int_a^b g(x)\\,dx \\]",
                         "\\[ \\int_a^b kf(x)\\,dx = k\\int_a^b f(x)\\,dx \\]",
                         "\\[ \\int_a^b 1\\,dx = b-a \\]",
-                        "\\[ \\int_a^b x^n\\,dx = \\left[\\frac{x^{n+1}}{n+1}\\right]_a^b \\]"
+                        "\\[ \\int_a^b x^n\\,dx = \\left[\\frac{x^{n+1}}{n+1}\\right]_a^b \\quad n\\neq -1 \\]"
                 ),
                 List.of(
                         new VideoLink("Yvan Monka — Intégrales Terminale", youtube("Yvan Monka intégrales terminale")),
-                        new VideoLink("Calculer une intégrale — méthode", youtube("calculer une intégrale terminale méthode")),
+                        new VideoLink("Méthode — Calculer une intégrale", youtube("calculer une intégrale terminale méthode")),
                         new VideoLink("Exercices corrigés — Intégrales", youtube("exercices corrigés intégrales terminale"))
                 ),
                 List.of(
-                        new QuizQuestion("À quoi sert une intégrale ?", "Elle sert à calculer une aire sous une courbe ou une quantité accumulée."),
-                        new QuizQuestion("Quelle formule utilise-t-on avec une primitive F ?", "On utilise ∫ de a à b f(x) dx = F(b) - F(a)."),
-                        new QuizQuestion("Si f est positive, que représente l’intégrale ?", "Elle représente l’aire sous la courbe entre a et b."),
-                        new QuizQuestion("Quelle erreur faut-il éviter ?", "Oublier les bornes ou calculer F(a) - F(b) au lieu de F(b) - F(a).")
+                        new QuizQuestion("Que représente une intégrale si f est positive ?", "Elle représente l’aire sous la courbe entre les bornes a et b."),
+                        new QuizQuestion("Comment calcule-t-on une intégrale avec une primitive ?", "On calcule F(b) - F(a)."),
+                        new QuizQuestion("Quelle est l’erreur fréquente ?", "Inverser les bornes ou oublier de soustraire F(a)."),
+                        new QuizQuestion("À quoi peut servir l’intégrale dans un problème concret ?", "À calculer une quantité totale accumulée.")
                 ),
                 "math"
         );
     }
 
-    private CourseContent exponentielle(String matiere, String chapitre) {
+    private CourseContent fonctionExponentielle(String matiere, String chapitre) {
         return new CourseContent(
                 matiere,
                 chapitre,
                 "Fonction exponentielle",
-                "La fonction exponentielle est une fonction fondamentale en Terminale. Elle est strictement positive, strictement croissante et possède une propriété unique : sa dérivée est elle-même.",
+                "La fonction exponentielle est une fonction fondamentale qui modélise de nombreuses croissances rapides. Sa particularité est d’être égale à sa propre dérivée.",
                 List.of(
                         "La fonction exponentielle se note exp(x) ou e^x.",
                         "Elle est définie sur tout R.",
                         "Elle est toujours strictement positive.",
                         "Elle est strictement croissante.",
                         "Sa dérivée est elle-même.",
-                        "Elle intervient dans les modèles de croissance, de décroissance et les équations différentielles."
+                        "Elle intervient dans les croissances, décroissances, intérêts composés et équations différentielles."
                 ),
                 List.of(
-                        "Reconnaître les expressions contenant e^x ou e^{u(x)}.",
+                        "Reconnaître une expression du type e^x ou e^{u(x)}.",
                         "Utiliser les propriétés de calcul de l’exponentielle.",
-                        "Dériver avec la formule adaptée.",
+                        "Dériver correctement l’expression.",
                         "Étudier le signe de la dérivée pour les variations.",
-                        "Utiliser le logarithme pour résoudre certaines équations."
+                        "Utiliser le logarithme si l’inconnue est dans l’exposant."
                 ),
                 List.of(
-                        "\\[ e^0 = 1 \\]",
+                        "\\[ e^0=1 \\]",
                         "\\[ e^{a+b}=e^a e^b \\]",
                         "\\[ e^{a-b}=\\frac{e^a}{e^b} \\]",
                         "\\[ (e^x)'=e^x \\]",
                         "\\[ (e^{u(x)})'=u'(x)e^{u(x)} \\]",
-                        "\\[ \\lim_{x\\to +\\infty} e^x = +\\infty \\]",
-                        "\\[ \\lim_{x\\to -\\infty} e^x = 0 \\]"
+                        "\\[ \\lim_{x\\to +\\infty} e^x=+\\infty \\]",
+                        "\\[ \\lim_{x\\to -\\infty} e^x=0 \\]"
                 ),
                 List.of(
                         new VideoLink("Yvan Monka — Fonction exponentielle", youtube("Yvan Monka fonction exponentielle terminale")),
@@ -176,32 +123,33 @@ public class MathCourseProvider implements CourseProvider {
                 List.of(
                         new QuizQuestion("Quelle est la dérivée de e^x ?", "La dérivée de e^x est e^x."),
                         new QuizQuestion("La fonction exponentielle peut-elle être négative ?", "Non, elle est toujours strictement positive."),
-                        new QuizQuestion("Quelle propriété simplifie e^{a+b} ?", "e^{a+b} = e^a × e^b."),
-                        new QuizQuestion("Comment dériver e^{u(x)} ?", "On utilise u'(x)e^{u(x)}.")
+                        new QuizQuestion("Comment dérive-t-on e^{u(x)} ?", "On utilise u'(x)e^{u(x)}."),
+                        new QuizQuestion("Pourquoi l’exponentielle est-elle importante ?", "Elle modélise des phénomènes d’évolution rapide.")
                 ),
                 "math"
         );
     }
 
-    private CourseContent logarithme(String matiere, String chapitre) {
+    private CourseContent fonctionLogarithme(String matiere, String chapitre) {
         return new CourseContent(
                 matiere,
                 chapitre,
                 "Fonction logarithme népérien",
-                "La fonction logarithme népérien, notée ln, est la fonction réciproque de l’exponentielle. Elle est définie uniquement pour les nombres strictement positifs.",
+                "La fonction logarithme népérien, notée ln, est la fonction réciproque de l’exponentielle. Elle permet notamment de résoudre des équations où l’inconnue se trouve dans un exposant.",
                 List.of(
-                        "ln(x) est défini seulement pour x > 0.",
+                        "ln(x) est défini uniquement pour x > 0.",
                         "ln(1) = 0 et ln(e) = 1.",
-                        "La fonction ln est strictement croissante sur ]0 ; +∞[.",
-                        "Elle transforme les produits en sommes.",
-                        "Elle permet de résoudre des équations exponentielles."
+                        "La fonction ln est strictement croissante.",
+                        "Le logarithme transforme les produits en sommes.",
+                        "Il est utilisé pour résoudre des équations exponentielles.",
+                        "Il faut toujours vérifier le domaine de définition."
                 ),
                 List.of(
-                        "Vérifier le domaine de définition.",
-                        "Utiliser les propriétés du logarithme.",
-                        "Résoudre les équations avec ln si l’inconnue est dans un exposant.",
+                        "Vérifier que ce qui est dans ln est strictement positif.",
+                        "Utiliser les propriétés de calcul du logarithme.",
+                        "Simplifier l’expression si possible.",
                         "Dériver avec la formule adaptée.",
-                        "Interpréter le résultat."
+                        "Résoudre l’équation puis vérifier la validité des solutions."
                 ),
                 List.of(
                         "\\[ \\ln(1)=0 \\]",
@@ -214,14 +162,14 @@ public class MathCourseProvider implements CourseProvider {
                 ),
                 List.of(
                         new VideoLink("Yvan Monka — Logarithme népérien", youtube("Yvan Monka logarithme népérien terminale")),
-                        new VideoLink("Résoudre une équation avec ln", youtube("résoudre équation logarithme terminale")),
+                        new VideoLink("Résoudre avec ln", youtube("résoudre équation logarithme terminale")),
                         new VideoLink("Exercices corrigés — Logarithme", youtube("exercices corrigés logarithme terminale"))
                 ),
                 List.of(
                         new QuizQuestion("Quel est le domaine de définition de ln(x) ?", "ln(x) est défini pour x > 0."),
-                        new QuizQuestion("Combien vaut ln(1) ?", "ln(1) = 0."),
-                        new QuizQuestion("Quelle est la dérivée de ln(x) ?", "La dérivée est 1/x."),
-                        new QuizQuestion("Quelle erreur faut-il éviter ?", "Écrire ln d’un nombre négatif ou nul.")
+                        new QuizQuestion("Combien vaut ln(1) ?", "ln(1) vaut 0."),
+                        new QuizQuestion("Quelle est la dérivée de ln(x) ?", "C’est 1/x."),
+                        new QuizQuestion("Quelle erreur faut-il éviter ?", "Utiliser ln sur un nombre négatif ou nul.")
                 ),
                 "math"
         );
@@ -232,26 +180,26 @@ public class MathCourseProvider implements CourseProvider {
                 matiere,
                 chapitre,
                 "Suites numériques",
-                "Une suite numérique est une liste ordonnée de nombres. Elle permet de modéliser une évolution étape par étape : population, capital, distance, algorithme ou phénomène récurrent.",
+                "Une suite numérique est une liste ordonnée de nombres. Elle permet de modéliser une évolution étape par étape, par exemple une population, un capital, une quantité ou un algorithme.",
                 List.of(
                         "Une suite associe un nombre u_n à chaque entier n.",
-                        "Elle peut être définie explicitement ou par récurrence.",
+                        "Une suite peut être définie par une formule explicite ou par récurrence.",
                         "Une suite arithmétique ajoute toujours la même raison.",
                         "Une suite géométrique multiplie toujours par la même raison.",
-                        "On peut étudier ses variations et sa limite."
+                        "On étudie souvent le sens de variation et la limite d’une suite."
                 ),
                 List.of(
-                        "Identifier le type de suite.",
+                        "Identifier si la suite est explicite ou récurrente.",
                         "Calculer les premiers termes.",
-                        "Déterminer si elle est arithmétique, géométrique ou autre.",
-                        "Étudier les variations.",
-                        "Chercher ou conjecturer la limite."
+                        "Reconnaître si elle est arithmétique ou géométrique.",
+                        "Étudier les variations avec u_{n+1} - u_n.",
+                        "Interpréter l’évolution de la suite."
                 ),
                 List.of(
-                        "\\[ u_n = u_0 + nr \\]",
-                        "\\[ u_n = u_0 \\times q^n \\]",
-                        "\\[ u_{n+1}-u_n > 0 \\Rightarrow (u_n) \\text{ croissante} \\]",
-                        "\\[ u_{n+1}-u_n < 0 \\Rightarrow (u_n) \\text{ décroissante} \\]"
+                        "\\[ u_n=u_0+nr \\quad \\text{suite arithmétique} \\]",
+                        "\\[ u_n=u_0q^n \\quad \\text{suite géométrique} \\]",
+                        "\\[ u_{n+1}-u_n>0 \\Rightarrow (u_n) \\text{ croissante} \\]",
+                        "\\[ u_{n+1}-u_n<0 \\Rightarrow (u_n) \\text{ décroissante} \\]"
                 ),
                 List.of(
                         new VideoLink("Yvan Monka — Suites numériques", youtube("Yvan Monka suites numériques terminale")),
@@ -261,7 +209,7 @@ public class MathCourseProvider implements CourseProvider {
                 List.of(
                         new QuizQuestion("Qu’est-ce qu’une suite arithmétique ?", "C’est une suite où l’on ajoute toujours le même nombre."),
                         new QuizQuestion("Qu’est-ce qu’une suite géométrique ?", "C’est une suite où l’on multiplie toujours par le même nombre."),
-                        new QuizQuestion("Comment montrer qu’une suite est croissante ?", "On peut étudier le signe de u_{n+1} - u_n."),
+                        new QuizQuestion("Comment étudier les variations d’une suite ?", "On peut étudier le signe de u_{n+1} - u_n."),
                         new QuizQuestion("Quelle différence entre explicite et récurrence ?", "Une formule explicite donne directement u_n, une récurrence utilise le terme précédent.")
                 ),
                 "math"
@@ -269,58 +217,148 @@ public class MathCourseProvider implements CourseProvider {
     }
 
     private CourseContent limitesSuites(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Limites de suites",
-                "Étudier la limite d’une suite consiste à comprendre son comportement lorsque n devient très grand. Une suite peut converger vers un nombre ou diverger vers l’infini.",
+                "La limite d’une suite décrit le comportement de ses termes lorsque n devient très grand. Une suite peut se rapprocher d’un nombre réel, tendre vers l’infini ou ne pas avoir de limite.",
                 List.of(
-                        "\\[ \\lim_{n\\to+\\infty}\\frac{1}{n}=0 \\]",
-                        "\\[ \\lim_{n\\to+\\infty} n = +\\infty \\]",
-                        "\\[ -1<q<1 \\Rightarrow \\lim_{n\\to+\\infty} q^n=0 \\]",
-                        "\\[ q>1 \\Rightarrow \\lim_{n\\to+\\infty} q^n=+\\infty \\]"
+                        "Une suite convergente se rapproche d’une valeur finie.",
+                        "Une suite divergente peut tendre vers +∞ ou -∞.",
+                        "Les suites géométriques ont des limites différentes selon la raison q.",
+                        "Les théorèmes de comparaison permettent de déterminer certaines limites.",
+                        "Il ne faut pas juger une limite uniquement avec les premiers termes."
                 ),
-                "Yvan Monka limites de suites terminale"
+                List.of(
+                        "Identifier l’expression de la suite.",
+                        "Reconnaître les suites de référence.",
+                        "Étudier les termes dominants.",
+                        "Appliquer les règles de limites.",
+                        "Conclure sur la convergence ou la divergence."
+                ),
+                List.of(
+                        "\\[ \\lim_{n\\to +\\infty}\\frac{1}{n}=0 \\]",
+                        "\\[ \\lim_{n\\to +\\infty}n=+\\infty \\]",
+                        "\\[ -1<q<1 \\Rightarrow \\lim_{n\\to+\\infty}q^n=0 \\]",
+                        "\\[ q>1 \\Rightarrow \\lim_{n\\to+\\infty}q^n=+\\infty \\]"
+                ),
+                List.of(
+                        new VideoLink("Yvan Monka — Limites de suites", youtube("Yvan Monka limites de suites terminale")),
+                        new VideoLink("Méthode limites de suites", youtube("limites de suites terminale méthode")),
+                        new VideoLink("Exercices corrigés — Limites de suites", youtube("exercices corrigés limites de suites terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Que signifie u_n tend vers L ?", "Les termes de la suite se rapprochent de L quand n devient grand."),
+                        new QuizQuestion("Quelle est la limite de 1/n ?", "Elle vaut 0."),
+                        new QuizQuestion("Que devient q^n si -1 < q < 1 ?", "La suite tend vers 0."),
+                        new QuizQuestion("Quelle erreur faut-il éviter ?", "Confondre les premiers termes avec le comportement à l’infini.")
+                ),
+                "math"
         );
     }
 
     private CourseContent limitesFonctions(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Limites de fonctions",
-                "La limite d’une fonction décrit son comportement près d’un nombre ou à l’infini. Elle sert à étudier les asymptotes, les comportements extrêmes et les formes indéterminées.",
+                "La limite d’une fonction décrit son comportement lorsqu’une variable se rapproche d’une valeur ou part vers l’infini. Elle permet de comprendre les asymptotes et les comportements extrêmes.",
                 List.of(
-                        "\\[ \\lim_{x\\to+\\infty} x^n=+\\infty \\]",
+                        "On peut étudier une limite en un réel ou à l’infini.",
+                        "Une limite peut être finie ou infinie.",
+                        "Les formes indéterminées doivent être transformées.",
+                        "Les termes dominants sont essentiels à l’infini.",
+                        "Les limites permettent d’identifier des asymptotes."
+                ),
+                List.of(
+                        "Identifier vers quoi tend x.",
+                        "Remplacer mentalement pour repérer la forme.",
+                        "Factoriser ou simplifier en cas de forme indéterminée.",
+                        "Utiliser les limites de référence.",
+                        "Conclure graphiquement si nécessaire."
+                ),
+                List.of(
+                        "\\[ \\lim_{x\\to+\\infty}x^n=+\\infty \\]",
                         "\\[ \\lim_{x\\to+\\infty}\\frac{1}{x}=0 \\]",
-                        "\\[ \\lim_{x\\to+\\infty} e^x=+\\infty \\]",
+                        "\\[ \\lim_{x\\to+\\infty}e^x=+\\infty \\]",
+                        "\\[ \\lim_{x\\to+\\infty}\\ln(x)=+\\infty \\]",
                         "\\[ \\lim_{x\\to0^+}\\ln(x)=-\\infty \\]"
                 ),
-                "Yvan Monka limites de fonctions terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Limites de fonctions", youtube("Yvan Monka limites de fonctions terminale")),
+                        new VideoLink("Formes indéterminées", youtube("formes indéterminées terminale limites")),
+                        new VideoLink("Exercices corrigés — Limites de fonctions", youtube("exercices corrigés limites de fonctions terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("À quoi sert une limite de fonction ?", "Elle décrit le comportement d’une fonction près d’un point ou à l’infini."),
+                        new QuizQuestion("Que faire avec une forme indéterminée ?", "Il faut transformer l’expression."),
+                        new QuizQuestion("Quelle limite vaut lim 1/x en +∞ ?", "Elle vaut 0."),
+                        new QuizQuestion("Quelle notion graphique est liée aux limites ?", "Les asymptotes.")
+                ),
+                "math"
         );
     }
 
     private CourseContent continuite(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Continuité",
-                "Une fonction continue est une fonction dont la courbe ne présente pas de rupture. La continuité permet d’utiliser le théorème des valeurs intermédiaires.",
+                "Une fonction continue est une fonction dont la courbe ne présente pas de rupture. La continuité est essentielle pour prouver qu’une équation possède au moins une solution.",
+                List.of(
+                        "Une fonction continue se trace sans rupture sur un intervalle.",
+                        "Les fonctions usuelles sont continues sur leur domaine.",
+                        "Le théorème des valeurs intermédiaires permet de prouver l’existence d’une solution.",
+                        "Si la fonction est continue et strictement monotone, la solution est unique.",
+                        "La continuité est souvent utilisée avec un tableau de variations."
+                ),
+                List.of(
+                        "Vérifier que la fonction est continue sur l’intervalle.",
+                        "Calculer les images aux bornes.",
+                        "Vérifier que la valeur cherchée est comprise entre les deux images.",
+                        "Appliquer le théorème des valeurs intermédiaires.",
+                        "Ajouter la stricte monotonie pour prouver l’unicité."
+                ),
                 List.of(
                         "\\[ f \\text{ continue sur } [a;b] \\]",
                         "\\[ k \\text{ entre } f(a) \\text{ et } f(b) \\Rightarrow \\exists c\\in[a;b], f(c)=k \\]",
-                        "\\[ \\text{Continue + strictement monotone} \\Rightarrow \\text{solution unique} \\]"
+                        "\\[ \\text{continue + strictement monotone} \\Rightarrow \\text{solution unique} \\]"
                 ),
-                "Yvan Monka continuité terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Continuité", youtube("Yvan Monka continuité terminale")),
+                        new VideoLink("Théorème des valeurs intermédiaires", youtube("théorème des valeurs intermédiaires terminale")),
+                        new VideoLink("Exercices corrigés — Continuité", youtube("exercices corrigés continuité terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Que signifie graphiquement la continuité ?", "La courbe ne présente pas de rupture."),
+                        new QuizQuestion("À quoi sert le théorème des valeurs intermédiaires ?", "À prouver l’existence d’une solution."),
+                        new QuizQuestion("Quand la solution est-elle unique ?", "Quand la fonction est continue et strictement monotone."),
+                        new QuizQuestion("Quelle condition ne faut-il pas oublier ?", "La continuité sur l’intervalle étudié.")
+                ),
+                "math"
         );
     }
 
     private CourseContent derivationConvexite(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Dérivation et convexité",
                 "La dérivation permet d’étudier les variations d’une fonction. La convexité permet d’analyser la forme de la courbe grâce à la dérivée seconde.",
+                List.of(
+                        "La dérivée donne le coefficient directeur de la tangente.",
+                        "Le signe de la dérivée donne les variations.",
+                        "La dérivée seconde permet d’étudier la convexité.",
+                        "Une fonction est convexe si sa courbe est tournée vers le haut.",
+                        "Un point d’inflexion correspond à un changement de convexité."
+                ),
+                List.of(
+                        "Calculer f'(x).",
+                        "Étudier le signe de f'(x).",
+                        "Construire le tableau de variations.",
+                        "Calculer f''(x) si la convexité est demandée.",
+                        "Étudier le signe de f''(x)."
+                ),
                 List.of(
                         "\\[ f'(x)>0 \\Rightarrow f \\text{ croissante} \\]",
                         "\\[ f'(x)<0 \\Rightarrow f \\text{ décroissante} \\]",
@@ -328,215 +366,454 @@ public class MathCourseProvider implements CourseProvider {
                         "\\[ f''(x)<0 \\Rightarrow f \\text{ concave} \\]",
                         "\\[ y=f'(a)(x-a)+f(a) \\]"
                 ),
-                "Yvan Monka dérivation convexité terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Dérivation Terminale", youtube("Yvan Monka dérivation terminale")),
+                        new VideoLink("Yvan Monka — Convexité", youtube("Yvan Monka convexité terminale")),
+                        new VideoLink("Exercices corrigés — Dérivation convexité", youtube("exercices corrigés dérivation convexité terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("À quoi sert la dérivée ?", "À étudier les variations et les tangentes."),
+                        new QuizQuestion("Que signifie f'(x) > 0 ?", "La fonction est croissante."),
+                        new QuizQuestion("Que signifie f''(x) > 0 ?", "La fonction est convexe."),
+                        new QuizQuestion("Qu’est-ce qu’un point d’inflexion ?", "Un point où la convexité change.")
+                ),
+                "math"
         );
     }
 
     private CourseContent primitives(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Primitives",
-                "Une primitive d’une fonction f est une fonction F dont la dérivée est f. Les primitives servent à calculer des intégrales et résoudre certaines équations différentielles.",
+                "Une primitive d’une fonction f est une fonction F dont la dérivée est f. Les primitives sont indispensables pour calculer des intégrales et résoudre des équations différentielles.",
+                List.of(
+                        "F est une primitive de f si F' = f.",
+                        "Une fonction possède plusieurs primitives.",
+                        "Deux primitives d’une même fonction diffèrent d’une constante.",
+                        "Les primitives permettent de calculer des intégrales.",
+                        "Il faut reconnaître les formes usuelles."
+                ),
+                List.of(
+                        "Identifier la fonction à primitiver.",
+                        "Reconnaître une forme connue.",
+                        "Écrire une primitive possible.",
+                        "Ajouter +C si on demande toutes les primitives.",
+                        "Vérifier en dérivant."
+                ),
                 List.of(
                         "\\[ F'=f \\]",
-                        "\\[ \\int x^n dx = \\frac{x^{n+1}}{n+1}+C \\]",
-                        "\\[ \\int e^x dx = e^x+C \\]",
-                        "\\[ \\int \\frac{1}{x}dx = \\ln(x)+C \\]"
+                        "\\[ \\int x^n dx=\\frac{x^{n+1}}{n+1}+C \\quad n\\neq -1 \\]",
+                        "\\[ \\int e^x dx=e^x+C \\]",
+                        "\\[ \\int \\frac{1}{x}dx=\\ln(x)+C \\quad x>0 \\]"
                 ),
-                "Yvan Monka primitives terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Primitives", youtube("Yvan Monka primitives terminale")),
+                        new VideoLink("Tableau des primitives", youtube("tableau primitives terminale")),
+                        new VideoLink("Exercices corrigés — Primitives", youtube("exercices corrigés primitives terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Qu’est-ce qu’une primitive de f ?", "C’est une fonction F telle que F' = f."),
+                        new QuizQuestion("Deux primitives diffèrent de quoi ?", "D’une constante."),
+                        new QuizQuestion("Comment vérifier une primitive ?", "On la dérive."),
+                        new QuizQuestion("Pourquoi les primitives sont-elles utiles ?", "Pour calculer des intégrales.")
+                ),
+                "math"
         );
     }
 
     private CourseContent equationsDifferentielles(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Équations différentielles",
-                "Une équation différentielle est une équation dont l’inconnue est une fonction et où intervient sa dérivée. Elle permet de modéliser des phénomènes d’évolution.",
+                "Une équation différentielle est une équation dont l’inconnue est une fonction et dans laquelle apparaît sa dérivée. Elle sert à modéliser des phénomènes d’évolution.",
+                List.of(
+                        "L’inconnue est une fonction.",
+                        "L’équation relie souvent une fonction et sa dérivée.",
+                        "Les solutions de y' = ay sont des fonctions exponentielles.",
+                        "Une condition initiale permet de trouver une solution unique.",
+                        "Ces équations modélisent des croissances, décroissances ou refroidissements."
+                ),
+                List.of(
+                        "Identifier le type d’équation.",
+                        "Utiliser la forme générale de la solution.",
+                        "Appliquer la condition initiale.",
+                        "Déterminer la constante.",
+                        "Interpréter la solution."
+                ),
                 List.of(
                         "\\[ y'=ay \\Rightarrow y(x)=Ce^{ax} \\]",
-                        "\\[ y'=ay+b \\Rightarrow y(x)=Ce^{ax}-\\frac{b}{a} \\]",
-                        "\\[ y(0)=y_0 \\Rightarrow \\text{permet de trouver } C \\]"
+                        "\\[ y'=ay+b \\Rightarrow y(x)=Ce^{ax}-\\frac{b}{a} \\quad a\\neq0 \\]",
+                        "\\[ y(0)=y_0 \\Rightarrow \\text{permet de déterminer } C \\]"
                 ),
-                "Yvan Monka équations différentielles terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Équations différentielles", youtube("Yvan Monka équations différentielles terminale")),
+                        new VideoLink("Méthode équations différentielles", youtube("équations différentielles terminale méthode")),
+                        new VideoLink("Exercices corrigés — Équations différentielles", youtube("exercices corrigés équations différentielles terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Quelle est l’inconnue dans une équation différentielle ?", "Une fonction."),
+                        new QuizQuestion("Quelle est la solution de y' = ay ?", "y(x) = Ce^{ax}."),
+                        new QuizQuestion("À quoi sert une condition initiale ?", "À déterminer la constante C."),
+                        new QuizQuestion("Pourquoi utilise-t-on ces équations ?", "Pour modéliser des phénomènes d’évolution.")
+                ),
+                "math"
         );
     }
 
     private CourseContent variablesAleatoires(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Variables aléatoires",
-                "Une variable aléatoire associe un nombre à chaque issue d’une expérience aléatoire. Elle permet de modéliser des gains, des pertes ou des résultats numériques.",
+                "Une variable aléatoire associe un nombre à chaque issue d’une expérience aléatoire. Elle permet de modéliser des gains, des pertes ou des résultats numériques dépendant du hasard.",
+                List.of(
+                        "Une variable aléatoire transforme une issue en nombre.",
+                        "La loi de probabilité donne les valeurs possibles et leurs probabilités.",
+                        "L’espérance représente une moyenne théorique.",
+                        "La variance mesure la dispersion.",
+                        "L’écart-type mesure la dispersion dans la même unité que la variable."
+                ),
+                List.of(
+                        "Lister les valeurs possibles.",
+                        "Déterminer la probabilité de chaque valeur.",
+                        "Construire la loi de probabilité.",
+                        "Calculer l’espérance.",
+                        "Interpréter le résultat dans le contexte."
+                ),
                 List.of(
                         "\\[ \\mathbb{E}(X)=\\sum x_i p_i \\]",
                         "\\[ V(X)=\\sum p_i(x_i-\\mathbb{E}(X))^2 \\]",
                         "\\[ \\sigma(X)=\\sqrt{V(X)} \\]",
                         "\\[ \\sum p_i=1 \\]"
                 ),
-                "Yvan Monka variables aléatoires terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Variables aléatoires", youtube("Yvan Monka variables aléatoires terminale")),
+                        new VideoLink("Espérance variance écart-type", youtube("espérance variance écart type terminale")),
+                        new VideoLink("Exercices corrigés — Variables aléatoires", youtube("exercices corrigés variables aléatoires terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Qu’est-ce qu’une variable aléatoire ?", "Elle associe une valeur numérique à chaque issue."),
+                        new QuizQuestion("Que représente l’espérance ?", "Une moyenne théorique à long terme."),
+                        new QuizQuestion("Que mesure la variance ?", "La dispersion autour de l’espérance."),
+                        new QuizQuestion("Quelle condition vérifient les probabilités ?", "Leur somme vaut 1.")
+                ),
+                "math"
         );
     }
 
     private CourseContent loiBinomiale(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Loi binomiale",
-                "La loi binomiale modélise le nombre de succès dans une répétition indépendante d’expériences identiques à deux issues : succès ou échec.",
+                "La loi binomiale modélise le nombre de succès obtenus lors de la répétition indépendante d’une même expérience à deux issues : succès ou échec.",
+                List.of(
+                        "Une épreuve de Bernoulli a deux issues.",
+                        "La loi binomiale compte le nombre de succès.",
+                        "Les répétitions doivent être indépendantes.",
+                        "Le nombre de répétitions est n.",
+                        "La probabilité du succès est p."
+                ),
+                List.of(
+                        "Identifier ce qu’on appelle succès.",
+                        "Déterminer n.",
+                        "Déterminer p.",
+                        "Vérifier l’indépendance.",
+                        "Utiliser la formule ou la calculatrice."
+                ),
                 List.of(
                         "\\[ X\\sim\\mathcal{B}(n,p) \\]",
                         "\\[ P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k} \\]",
                         "\\[ \\mathbb{E}(X)=np \\]",
-                        "\\[ V(X)=np(1-p) \\]"
+                        "\\[ V(X)=np(1-p) \\]",
+                        "\\[ \\sigma(X)=\\sqrt{np(1-p)} \\]"
                 ),
-                "Yvan Monka loi binomiale terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Loi binomiale", youtube("Yvan Monka loi binomiale terminale")),
+                        new VideoLink("Calculatrice loi binomiale", youtube("calculatrice loi binomiale terminale")),
+                        new VideoLink("Exercices corrigés — Loi binomiale", youtube("exercices corrigés loi binomiale terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Que modélise la loi binomiale ?", "Le nombre de succès dans n répétitions indépendantes."),
+                        new QuizQuestion("Que signifie X suit B(n,p) ?", "X suit une loi binomiale de paramètres n et p."),
+                        new QuizQuestion("Quelle est l’espérance ?", "E(X)=np."),
+                        new QuizQuestion("Quelle condition est essentielle ?", "Les répétitions doivent être indépendantes.")
+                ),
+                "math"
         );
     }
 
-    private CourseContent sommesVariables(String matiere, String chapitre) {
-        return simpleMathCourse(
+    private CourseContent sommesVariablesAleatoires(String matiere, String chapitre) {
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Sommes de variables aléatoires",
-                "Ce chapitre étudie ce qui se passe lorsqu’on additionne plusieurs variables aléatoires. Il sert à calculer l’espérance et la variance d’une somme.",
+                "Ce chapitre étudie ce qui se passe lorsqu’on additionne plusieurs variables aléatoires. Il permet notamment de calculer l’espérance et la variance d’une somme.",
+                List.of(
+                        "L’espérance est linéaire.",
+                        "L’espérance d’une somme est la somme des espérances.",
+                        "La variance d’une somme s’additionne si les variables sont indépendantes.",
+                        "Ce chapitre est utile pour les expériences répétées.",
+                        "Il prépare à la loi des grands nombres."
+                ),
+                List.of(
+                        "Identifier les variables aléatoires.",
+                        "Calculer leurs espérances.",
+                        "Utiliser la linéarité de l’espérance.",
+                        "Vérifier l’indépendance pour les variances.",
+                        "Interpréter le résultat."
+                ),
                 List.of(
                         "\\[ \\mathbb{E}(X+Y)=\\mathbb{E}(X)+\\mathbb{E}(Y) \\]",
                         "\\[ \\mathbb{E}(aX+b)=a\\mathbb{E}(X)+b \\]",
-                        "\\[ V(X+Y)=V(X)+V(Y) \\text{ si X et Y indépendantes} \\]"
+                        "\\[ V(X+Y)=V(X)+V(Y) \\quad \\text{si X et Y sont indépendantes} \\]"
                 ),
-                "sommes de variables aléatoires terminale"
+                List.of(
+                        new VideoLink("Sommes de variables aléatoires", youtube("sommes de variables aléatoires terminale")),
+                        new VideoLink("Espérance d’une somme", youtube("espérance somme variables aléatoires terminale")),
+                        new VideoLink("Exercices corrigés — Sommes de variables", youtube("exercices corrigés somme variables aléatoires terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Que vaut E(X+Y) ?", "E(X+Y)=E(X)+E(Y)."),
+                        new QuizQuestion("Quand peut-on additionner les variances ?", "Quand les variables sont indépendantes."),
+                        new QuizQuestion("Pourquoi ce chapitre est important ?", "Il permet d’étudier des répétitions d’expériences."),
+                        new QuizQuestion("Quelle propriété est essentielle ?", "La linéarité de l’espérance.")
+                ),
+                "math"
         );
     }
 
-    private CourseContent concentration(String matiere, String chapitre) {
-        return simpleMathCourse(
+    private CourseContent concentrationLoiGrandsNombres(String matiere, String chapitre) {
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Concentration et loi des grands nombres",
-                "La loi des grands nombres explique que lorsqu’on répète une expérience un grand nombre de fois, la moyenne observée se rapproche de l’espérance théorique.",
+                "La loi des grands nombres explique que lorsqu’on répète une expérience aléatoire un grand nombre de fois, la moyenne observée se rapproche de l’espérance théorique.",
+                List.of(
+                        "La moyenne expérimentale se stabilise quand le nombre d’essais augmente.",
+                        "La fréquence observée se rapproche de la probabilité théorique.",
+                        "La variance de la moyenne diminue quand n augmente.",
+                        "Ce chapitre justifie les estimations statistiques.",
+                        "Plus l’échantillon est grand, plus la moyenne devient fiable."
+                ),
+                List.of(
+                        "Identifier l’expérience répétée.",
+                        "Identifier la variable étudiée.",
+                        "Calculer ou repérer l’espérance.",
+                        "Comprendre ce que représente la moyenne.",
+                        "Interpréter la stabilité quand n augmente."
+                ),
                 List.of(
                         "\\[ M_n=\\frac{X_1+X_2+...+X_n}{n} \\]",
                         "\\[ \\mathbb{E}(M_n)=\\mathbb{E}(X) \\]",
-                        "\\[ V(M_n)=\\frac{V(X)}{n} \\]"
+                        "\\[ V(M_n)=\\frac{V(X)}{n} \\]",
+                        "\\[ n \\text{ grand } \\Rightarrow M_n \\text{ proche de } \\mathbb{E}(X) \\]"
                 ),
-                "loi des grands nombres terminale"
+                List.of(
+                        new VideoLink("Loi des grands nombres", youtube("loi des grands nombres terminale")),
+                        new VideoLink("Concentration probabilités Terminale", youtube("concentration probabilités terminale")),
+                        new VideoLink("Exercices corrigés — Loi des grands nombres", youtube("exercices corrigés loi des grands nombres terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Que dit la loi des grands nombres ?", "La moyenne observée se rapproche de l’espérance quand n augmente."),
+                        new QuizQuestion("Que se passe-t-il quand n augmente ?", "La variance de la moyenne diminue."),
+                        new QuizQuestion("Pourquoi ce chapitre est utile ?", "Il justifie les estimations sur grands échantillons."),
+                        new QuizQuestion("Quelle est l’idée principale ?", "Plus on répète, plus la moyenne est stable.")
+                ),
+                "math"
         );
     }
 
-    private CourseContent combinatoire(String matiere, String chapitre) {
-        return simpleMathCourse(
+    private CourseContent combinatoireDenombrement(String matiere, String chapitre) {
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Combinatoire et dénombrement",
-                "La combinatoire sert à compter le nombre de possibilités dans une situation donnée. Elle est essentielle en probabilités.",
+                "La combinatoire sert à compter le nombre de possibilités dans une situation. Elle est essentielle en probabilités, car calculer une probabilité revient souvent à compter les cas favorables et les cas possibles.",
                 List.of(
-                        "\\[ n! = 1\\times2\\times...\\times n \\]",
+                        "Le dénombrement consiste à compter sans oublier ni répéter.",
+                        "L’ordre peut compter ou non selon la situation.",
+                        "Une combinaison ne tient pas compte de l’ordre.",
+                        "Le coefficient binomial compte le nombre de choix possibles.",
+                        "La combinatoire est utilisée dans la loi binomiale."
+                ),
+                List.of(
+                        "Identifier si l’ordre compte.",
+                        "Identifier s’il y a répétition.",
+                        "Choisir la formule adaptée.",
+                        "Calculer le nombre de cas possibles.",
+                        "Utiliser le résultat dans une probabilité."
+                ),
+                List.of(
+                        "\\[ n!=1\\times2\\times...\\times n \\]",
                         "\\[ \\binom{n}{k}=\\frac{n!}{k!(n-k)!} \\]",
+                        "\\[ \\binom{n}{0}=1 \\]",
+                        "\\[ \\binom{n}{n}=1 \\]",
                         "\\[ \\binom{n}{k}=\\binom{n}{n-k} \\]"
                 ),
-                "Yvan Monka combinatoire dénombrement terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Combinatoire", youtube("Yvan Monka combinatoire dénombrement terminale")),
+                        new VideoLink("Coefficients binomiaux", youtube("coefficients binomiaux terminale")),
+                        new VideoLink("Exercices corrigés — Dénombrement", youtube("exercices corrigés dénombrement terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("À quoi sert la combinatoire ?", "À compter le nombre de possibilités."),
+                        new QuizQuestion("Que signifie C(n,k) ?", "Le nombre de façons de choisir k éléments parmi n."),
+                        new QuizQuestion("Quelle question faut-il se poser ?", "Est-ce que l’ordre compte ?"),
+                        new QuizQuestion("Où utilise-t-on la combinatoire ?", "En probabilités, notamment avec la loi binomiale.")
+                ),
+                "math"
         );
     }
 
     private CourseContent vecteursDroitesPlans(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Vecteurs, droites et plans de l’espace",
                 "Ce chapitre généralise la géométrie du plan à l’espace. Les vecteurs permettent de décrire des points, des droites, des plans et des positions en trois dimensions.",
                 List.of(
+                        "Un point de l’espace possède trois coordonnées.",
+                        "Un vecteur de l’espace possède trois coordonnées.",
+                        "Une droite peut être définie par un point et un vecteur directeur.",
+                        "Un plan peut être défini par un point et deux vecteurs non colinéaires.",
+                        "La colinéarité permet d’étudier alignement et parallélisme."
+                ),
+                List.of(
+                        "Calculer les coordonnées de vecteurs.",
+                        "Tester la colinéarité.",
+                        "Écrire une représentation paramétrique de droite.",
+                        "Identifier un plan avec deux directions.",
+                        "Interpréter géométriquement le résultat."
+                ),
+                List.of(
                         "\\[ \\overrightarrow{AB}(x_B-x_A;y_B-y_A;z_B-z_A) \\]",
                         "\\[ M\\in d \\Rightarrow \\overrightarrow{AM}=t\\vec{u} \\]",
                         "\\[ \\vec{u}=k\\vec{v} \\Rightarrow \\vec{u} \\text{ et } \\vec{v} \\text{ colinéaires} \\]"
                 ),
-                "Yvan Monka géométrie espace terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Géométrie dans l’espace", youtube("Yvan Monka vecteurs droites plans espace terminale")),
+                        new VideoLink("Droites et plans de l’espace", youtube("droites plans espace terminale")),
+                        new VideoLink("Exercices corrigés — Vecteurs espace", youtube("exercices corrigés vecteurs espace terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Combien de coordonnées possède un point de l’espace ?", "Trois coordonnées."),
+                        new QuizQuestion("Comment définir une droite ?", "Avec un point et un vecteur directeur."),
+                        new QuizQuestion("Comment tester la colinéarité ?", "On vérifie si un vecteur est un multiple de l’autre."),
+                        new QuizQuestion("À quoi sert une représentation paramétrique ?", "À décrire tous les points d’une droite.")
+                ),
+                "math"
         );
     }
 
     private CourseContent orthogonaliteDistances(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Orthogonalité et distances dans l’espace",
-                "Ce chapitre utilise le produit scalaire pour étudier l’orthogonalité, les longueurs, les distances et les plans dans l’espace.",
+                "Ce chapitre utilise le produit scalaire pour étudier les angles, l’orthogonalité et les distances dans l’espace.",
+                List.of(
+                        "Le produit scalaire permet de tester l’orthogonalité.",
+                        "Deux vecteurs sont orthogonaux si leur produit scalaire vaut 0.",
+                        "La norme d’un vecteur donne sa longueur.",
+                        "La distance entre deux points se calcule avec leurs coordonnées.",
+                        "Un vecteur normal est perpendiculaire à un plan."
+                ),
+                List.of(
+                        "Calculer les coordonnées des vecteurs.",
+                        "Calculer le produit scalaire.",
+                        "Tester s’il vaut 0.",
+                        "Calculer une norme ou une distance.",
+                        "Conclure géométriquement."
+                ),
                 List.of(
                         "\\[ \\vec{u}\\cdot\\vec{v}=xx'+yy'+zz' \\]",
                         "\\[ \\vec{u}\\perp\\vec{v} \\Leftrightarrow \\vec{u}\\cdot\\vec{v}=0 \\]",
+                        "\\[ \\|\\vec{u}\\|=\\sqrt{x^2+y^2+z^2} \\]",
                         "\\[ AB=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2} \\]"
                 ),
-                "Yvan Monka produit scalaire espace terminale"
+                List.of(
+                        new VideoLink("Yvan Monka — Produit scalaire espace", youtube("Yvan Monka produit scalaire espace terminale")),
+                        new VideoLink("Orthogonalité dans l’espace", youtube("orthogonalité distance espace terminale")),
+                        new VideoLink("Exercices corrigés — Distances espace", youtube("exercices corrigés distances espace terminale"))
+                ),
+                List.of(
+                        new QuizQuestion("Quand deux vecteurs sont-ils orthogonaux ?", "Quand leur produit scalaire vaut 0."),
+                        new QuizQuestion("Que représente la norme ?", "La longueur du vecteur."),
+                        new QuizQuestion("Comment calcule-t-on une distance entre deux points ?", "Avec la formule utilisant les différences de coordonnées."),
+                        new QuizQuestion("Qu’est-ce qu’un vecteur normal ?", "Un vecteur perpendiculaire à un plan.")
+                ),
+                "math"
         );
     }
 
     private CourseContent equationsDroitesPlans(String matiere, String chapitre) {
-        return simpleMathCourse(
+        return new CourseContent(
                 matiere,
                 chapitre,
                 "Équations de droites et de plans",
                 "Ce chapitre apprend à décrire les droites et les plans de l’espace avec des équations paramétriques et cartésiennes.",
                 List.of(
+                        "Une droite de l’espace se décrit souvent par une représentation paramétrique.",
+                        "Un plan peut être décrit par une équation cartésienne.",
+                        "Un vecteur directeur sert à définir une droite.",
+                        "Un vecteur normal sert à définir un plan.",
+                        "Les systèmes permettent d’étudier les intersections."
+                ),
+                List.of(
+                        "Pour une droite, repérer un point et un vecteur directeur.",
+                        "Écrire les trois équations paramétriques.",
+                        "Pour un plan, repérer un vecteur normal.",
+                        "Utiliser la forme ax + by + cz + d = 0.",
+                        "Tester l’appartenance par substitution."
+                ),
+                List.of(
                         "\\[ d:\\begin{cases} x=x_A+ta \\\\ y=y_A+tb \\\\ z=z_A+tc \\end{cases} \\]",
                         "\\[ P: ax+by+cz+d=0 \\]",
-                        "\\[ \\vec{n}(a;b;c) \\text{ est normal au plan } P \\]"
+                        "\\[ \\vec{n}(a;b;c) \\text{ est un vecteur normal au plan } P \\]",
+                        "\\[ M(x;y;z)\\in P \\Leftrightarrow ax+by+cz+d=0 \\]"
                 ),
-                "équations droites plans espace terminale"
-        );
-    }
-
-    private CourseContent mathsGeneral(String matiere, String chapitre) {
-        return simpleMathCourse(
-                matiere,
-                chapitre,
-                "Cours de mathématiques",
-                "Ce chapitre de mathématiques doit être travaillé avec les définitions, les propriétés, les formules et les méthodes d’exercice.",
                 List.of(
-                        "\\[ \\text{Définition} \\Rightarrow \\text{Méthode} \\Rightarrow \\text{Application} \\]",
-                        "\\[ \\text{Résultat final} = \\text{calcul justifié} + \\text{conclusion} \\]"
+                        new VideoLink("Yvan Monka — Droites et plans", youtube("Yvan Monka équations droites plans espace terminale")),
+                        new VideoLink("Représentation paramétrique", youtube("représentation paramétrique droite espace terminale")),
+                        new VideoLink("Équation cartésienne d’un plan", youtube("équation cartésienne plan terminale"))
                 ),
-                "Yvan Monka terminale " + chapitre
+                List.of(
+                        new QuizQuestion("Quelle forme utilise-t-on pour une droite ?", "Une représentation paramétrique."),
+                        new QuizQuestion("Quelle est la forme d’une équation de plan ?", "ax + by + cz + d = 0."),
+                        new QuizQuestion("À quoi sert un vecteur normal ?", "À écrire l’équation d’un plan."),
+                        new QuizQuestion("Comment tester si un point appartient à un plan ?", "On remplace ses coordonnées dans l’équation.")
+                ),
+                "math"
         );
     }
 
-    private CourseContent simpleMathCourse(
-            String matiere,
-            String chapitre,
-            String title,
-            String resume,
-            List<String> formulas,
-            String videoQuery
-    ) {
+    private CourseContent coursMathEnPreparation(String matiere, String chapitre) {
         return new CourseContent(
                 matiere,
                 chapitre,
-                title,
-                resume,
+                "Cours de mathématiques en préparation",
+                "Ce chapitre de mathématiques n’a pas encore été ajouté dans la version complète. Les autres chapitres principaux de Terminale sont déjà disponibles avec un vrai cours, des formules, une méthode, des vidéos et un quiz.",
                 List.of(
-                        "Comprendre la définition principale du chapitre.",
-                        "Savoir reconnaître les situations où utiliser la méthode.",
-                        "Apprendre les propriétés et formules importantes.",
-                        "S’entraîner sur des exercices progressifs.",
-                        "Savoir rédiger proprement une réponse."
+                        "Chapitre non encore rédigé en version complète.",
+                        "Le contenu sera ajouté dans une prochaine mise à jour.",
+                        "Les chapitres principaux de Terminale mathématiques sont déjà pris en charge."
                 ),
                 List.of(
-                        "Lire l’énoncé attentivement.",
-                        "Repérer les données utiles.",
-                        "Choisir la formule ou propriété adaptée.",
-                        "Faire les calculs étape par étape.",
-                        "Conclure avec une phrase claire."
-                ),
-                formulas,
-                List.of(
-                        new VideoLink("Vidéo de cours — " + title, youtube(videoQuery)),
-                        new VideoLink("Exercices corrigés — " + title, youtube("exercices corrigés " + title + " terminale")),
-                        new VideoLink("Méthode bac — " + title, youtube("méthode bac " + title + " terminale"))
+                        "Revenir après la prochaine mise à jour.",
+                        "Utiliser les vidéos proposées en attendant.",
+                        "Créer une fiche personnelle sur ce chapitre."
                 ),
                 List.of(
-                        new QuizQuestion("Quelle est l’idée principale du chapitre ?", "Elle dépend du chapitre, mais il faut pouvoir la résumer simplement avec les définitions clés."),
-                        new QuizQuestion("Pourquoi les formules sont importantes ?", "Elles permettent d’appliquer le cours dans les exercices."),
-                        new QuizQuestion("Quelle est la bonne méthode de révision ?", "Comprendre le cours, refaire les exemples, puis s’entraîner avec des exercices."),
-                        new QuizQuestion("Quelle erreur faut-il éviter ?", "Appliquer une formule sans vérifier ses conditions d’utilisation.")
+                        "Aucune formule détaillée disponible pour le moment."
+                ),
+                List.of(
+                        new VideoLink("Recherche vidéo — " + chapitre, youtube("Yvan Monka terminale " + chapitre))
+                ),
+                List.of(
+                        new QuizQuestion("Pourquoi ce chapitre n’est pas complet ?", "Parce qu’il n’a pas encore été rédigé dans le provider mathématiques.")
                 ),
                 "math"
         );
