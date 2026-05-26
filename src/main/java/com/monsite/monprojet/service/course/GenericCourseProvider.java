@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-import static com.monsite.monprojet.service.course.CourseUtils.youtube;
-
 @Component
 @Order(999)
 public class GenericCourseProvider implements CourseProvider {
@@ -21,49 +19,25 @@ public class GenericCourseProvider implements CourseProvider {
         return new CourseContent(
                 matiere,
                 chapitre,
-                "Cours de révision",
-                "Ce chapitre présente les notions essentielles à connaître. L’objectif est de comprendre le sujet, retenir les idées importantes, savoir les expliquer et s’entraîner avec un quiz.",
+                "Cours en préparation",
+                "Ce chapitre n’a pas encore été rédigé en version complète. Les matières principales vont être ajoutées une par une avec de vrais cours, des explications, des méthodes, des vidéos et un quiz.",
                 List.of(
-                        "Comprendre les notions principales du chapitre.",
-                        "Retenir les définitions importantes.",
-                        "Savoir expliquer avec ses propres mots.",
-                        "Utiliser des exemples précis.",
-                        "S’entraîner avec des questions."
+                        "Cours complet en cours de rédaction.",
+                        "Le contenu sera bientôt remplacé par une vraie fiche détaillée.",
+                        "Chaque chapitre aura son propre résumé, ses notions, sa méthode et son quiz."
                 ),
                 List.of(
-                        "Lire le cours une première fois.",
-                        "Repérer les mots-clés.",
-                        "Faire une fiche courte.",
-                        "Apprendre les définitions.",
-                        "Faire le quiz et corriger ses erreurs."
+                        "Revenir dans quelques instants après la mise à jour.",
+                        "Le chapitre sera ajouté dans le prochain pack de cours."
                 ),
                 List.of(
-                        "Définition → exemple → application.",
-                        "Cours → fiche → entraînement.",
-                        "Notion → méthode → exercice."
+                        "Aucune formule disponible pour le moment."
                 ),
-                List.of(
-                        new VideoLink(
-                                "Recherche vidéo — " + chapitre,
-                                youtube("terminale " + matiere + " " + chapitre)
-                        ),
-                        new VideoLink(
-                                "Méthode bac — " + matiere,
-                                youtube("méthode bac terminale " + matiere)
-                        )
-                ),
+                List.of(),
                 List.of(
                         new QuizQuestion(
-                                "Quelle est l’idée principale du chapitre ?",
-                                "Elle dépend du sujet étudié, mais elle doit pouvoir être résumée simplement."
-                        ),
-                        new QuizQuestion(
-                                "Comment bien réviser ce chapitre ?",
-                                "En comprenant les notions, en faisant une fiche et en s’entraînant."
-                        ),
-                        new QuizQuestion(
-                                "Pourquoi faire un quiz ?",
-                                "Pour vérifier ce qu’on a réellement retenu."
+                                "Pourquoi cette page n’affiche pas encore un vrai cours ?",
+                                "Parce que ce chapitre n’a pas encore été ajouté dans son provider dédié."
                         )
                 ),
                 "generic"
